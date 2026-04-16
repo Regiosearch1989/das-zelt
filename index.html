@@ -416,6 +416,11 @@ const S={
 };
 const PROG={q1_type:1,q2_visited:2,pa_interest:3,pb_invest:4,pc_priority:5,p_form:6,ca_interest:3,cb_goal:4,c_form:5};
 
+/* Pre-computed star arrays — outside React so no hooks needed */
+const SUCCESS_STARS=Array.from({length:70},(_,i)=>({id:i,l:Math.random()*100,t:Math.random()*100,sz:Math.random()*1.8+.4,dur:(Math.random()*3+2).toFixed(1),del:(Math.random()*4).toFixed(1)}));
+const FUNNEL_STARS=Array.from({length:90},(_,i)=>({id:i,l:Math.random()*100,t:Math.random()*100,sz:Math.random()*1.8+.4,dur:(Math.random()*3+2).toFixed(1),del:(Math.random()*5).toFixed(1)}));
+const INVEST_STARS=Array.from({length:60},(_,i)=>({id:i,l:Math.random()*100,t:Math.random()*100,sz:Math.random()*1.8+.4,dur:(Math.random()*3+2).toFixed(1),del:(Math.random()*4).toFixed(1)}));
+
 function computeTags(d){
   const t=[];
   if(d.lead_type==='private'){
@@ -462,15 +467,13 @@ function AnimateIn({children,delay=0,style={}}){
 /* ══════════════════════════════════
    BACKGROUND (hero only)
 ══════════════════════════════════ */
-function SnowHero({count=30}){
-  const f=useMemo(()=>Array.from({length:count},(_,i)=>({
-    id:i,left:Math.random()*100,size:Math.random()*10+6,
-    dur:(Math.random()*9+8).toFixed(1),del:(Math.random()*12).toFixed(1),
-    op:(Math.random()*.45+.25).toFixed(2),
-  })),[]);
+const SNOW_FLAKES=Array.from({length:30},(_,i)=>({id:i,left:Math.random()*100,size:Math.random()*10+6,dur:(Math.random()*9+8).toFixed(1),del:(Math.random()*12).toFixed(1),op:(Math.random()*.45+.25).toFixed(2)}));
+const HERO_STARS=Array.from({length:80},(_,i)=>({id:i,l:Math.random()*100,t:Math.random()*100,sz:Math.random()*2+.4,dur:(Math.random()*3+2).toFixed(1),del:(Math.random()*4).toFixed(1),gold:Math.random()>.8}));
+
+function SnowHero(){
   return(
     <div style={{position:'absolute',inset:0,overflow:'hidden',pointerEvents:'none',zIndex:2}}>
-      {f.map(s=>(
+      {SNOW_FLAKES.map(s=>(
         <div key={s.id} style={{position:'absolute',left:`${s.left}%`,top:'-20px',fontSize:`${s.size}px`,opacity:s.op,userSelect:'none',color:'rgba(230,240,255,0.9)',animation:`snowfall ${s.dur}s linear ${s.del}s infinite`}}>❄</div>
       ))}
     </div>
@@ -478,11 +481,7 @@ function SnowHero({count=30}){
 }
 
 function StarsHero(){
-  const s=useMemo(()=>Array.from({length:80},(_,i)=>({
-    id:i,l:Math.random()*100,t:Math.random()*100,
-    sz:Math.random()*2+.4,dur:(Math.random()*3+2).toFixed(1),
-    del:(Math.random()*4).toFixed(1),gold:Math.random()>.8,
-  })),[]);
+  const s=HERO_STARS;
   return(
     <div style={{position:'absolute',inset:0,overflow:'hidden',pointerEvents:'none',zIndex:1}}>
       {s.map(x=>(
@@ -913,7 +912,7 @@ function InvestmentSection({onCTA}){
       {/* subtle glow */}
       <div style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',width:'700px',height:'450px',background:'radial-gradient(ellipse,rgba(212,168,67,.06) 0%,transparent 70%)',pointerEvents:'none',zIndex:0}}/>
       {/* star particles */}
-      {useMemo(()=>Array.from({length:60},(_,i)=>({id:i,l:Math.random()*100,t:Math.random()*100,sz:Math.random()*1.8+.4,dur:(Math.random()*3+2).toFixed(1),del:(Math.random()*4).toFixed(1)})),[]).map(x=>(
+      {INVEST_STARS.map(x=>(
         <div key={x.id} style={{position:'absolute',left:`${x.l}%`,top:`${x.t}%`,width:`${x.sz}px`,height:`${x.sz}px`,borderRadius:'50%',background:'rgba(255,255,255,.6)',animation:`twinkle ${x.dur}s ease-in-out ${x.del}s infinite`,pointerEvents:'none'}}/>
       ))}
 
@@ -1473,6 +1472,7 @@ function App(){
   const scrolled=useScrolled(500);
   useEffect(()=>{setShowSticky(scrolled&&phase==='landing');},[scrolled,phase]);
 
+
   const upd=u=>setLead(p=>({...p,...u}));
 
   const startFunnel=useCallback((pre=null)=>{
@@ -1546,7 +1546,7 @@ function App(){
   /* SUCCESS */
   if(phase==='success') return(
     <div style={{minHeight:'100vh',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',padding:'2rem 0',background:'radial-gradient(ellipse at center top,rgba(8,18,55,.4) 0%,#06070d 55%)',position:'relative',overflow:'hidden'}}>
-      {useMemo(()=>Array.from({length:70},(_,i)=>({id:i,l:Math.random()*100,t:Math.random()*100,sz:Math.random()*1.8+.4,dur:(Math.random()*3+2).toFixed(1),del:(Math.random()*4).toFixed(1)})),[]).map(x=>(
+      {SUCCESS_STARS.map(x=>(
         <div key={x.id} style={{position:'absolute',left:`${x.l}%`,top:`${x.t}%`,width:`${x.sz}px`,height:`${x.sz}px`,borderRadius:'50%',background:'rgba(255,255,255,.65)',animation:`twinkle ${x.dur}s ease-in-out ${x.del}s infinite`,pointerEvents:'none'}}/>
       ))}
       <div style={{position:'relative',zIndex:10,width:'100%'}}>
@@ -1561,7 +1561,7 @@ function App(){
     return(
       <div style={{minHeight:'100vh',display:'flex',flexDirection:'column',background:'radial-gradient(ellipse at 50% 0%,rgba(8,18,55,.38) 0%,#06070d 55%)',position:'relative',overflow:'hidden'}}>
         <div style={{position:'fixed',inset:0,pointerEvents:'none',zIndex:0}}>
-          {useMemo(()=>Array.from({length:90},(_,i)=>({id:i,l:Math.random()*100,t:Math.random()*100,sz:Math.random()*1.8+.4,dur:(Math.random()*3+2).toFixed(1),del:(Math.random()*5).toFixed(1)})),[]).map(x=>(
+          {FUNNEL_STARS.map(x=>(
             <div key={x.id} style={{position:'absolute',left:`${x.l}%`,top:`${x.t}%`,width:`${x.sz}px`,height:`${x.sz}px`,borderRadius:'50%',background:'rgba(255,255,255,.55)',animation:`twinkle ${x.dur}s ease-in-out ${x.del}s infinite`}}/>
           ))}
         </div>
