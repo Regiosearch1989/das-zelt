@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAS ZELT – Exklusive Einladung 2025</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{serif:['Playfair Display','Georgia','serif'],sans:['Inter','system-ui','sans-serif']}}}}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      background:#FDFAF5;
+      color:#1A1510;
+      font-family:'Inter',system-ui,sans-serif;
+      overflow-x:hidden;
+      -webkit-font-smoothing:antialiased;
+    }
+    .font-serif{font-family:'Playfair Display',Georgia,serif}
+
+    /* ── GOLD SHIMMER (hero / dark bg) ── */
+    .gold-shimmer{
+      background:linear-gradient(90deg,#9e7c1f 0%,#d4a843 25%,#f0cc6e 50%,#d4a843 75%,#9e7c1f 100%);
+      background-size:200% auto;
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+      animation:shimmerText 4s linear infinite;
+    }
+    /* ── GOLD SHIMMER (light bg – darker range) ── */
+    .gold-shimmer-dark{
+      background:linear-gradient(90deg,#7A5E10 0%,#B8890C 30%,#D4A843 50%,#B8890C 70%,#7A5E10 100%);
+      background-size:200% auto;
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+      animation:shimmerText 4s linear infinite;
+    }
+    @keyframes shimmerText{to{background-position:200% center}}
+
+    /* ── SNOWFALL ── */
+    @keyframes snowfall{
+      0%  {transform:translateY(-20px) translateX(0)  rotate(0deg);  opacity:0}
+      8%  {opacity:.9}
+      92% {opacity:.6}
+      100%{transform:translateY(105vh) translateX(22px) rotate(540deg);opacity:0}
+    }
+    /* ── AURORA ── */
+    @keyframes aurora{
+      0%,100%{opacity:.25;transform:scaleX(1)   scaleY(1)  }
+      50%    {opacity:.5; transform:scaleX(1.12) scaleY(1.18)}
+    }
+    /* ── TWINKLE ── */
+    @keyframes twinkle{
+      0%,100%{opacity:.2;transform:scale(1)  }
+      50%    {opacity:1; transform:scale(1.5)}
+    }
+    /* ── PULSE ── */
+    @keyframes pulse{
+      0%,100%{box-shadow:0 0 0 0   rgba(74,222,128,.45)}
+      50%    {box-shadow:0 0 0 7px rgba(74,222,128,0)  }
+    }
+    /* ── SCROLL BOUNCE ── */
+    @keyframes scrollBounce{
+      0%,100%{transform:translateX(-50%) translateY(0) }
+      50%    {transform:translateX(-50%) translateY(8px)}
+    }
+    /* ── FADE UP ── */
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(22px)}
+      to  {opacity:1;transform:translateY(0)   }
+    }
+    .fade-up-0{animation:fadeUp .7s ease-out .1s  both}
+    .fade-up-1{animation:fadeUp .7s ease-out .28s both}
+    .fade-up-2{animation:fadeUp .7s ease-out .46s both}
+    .fade-up-3{animation:fadeUp .7s ease-out .64s both}
+    .fade-up-4{animation:fadeUp .7s ease-out .82s both}
+    .fade-up-5{animation:fadeUp .7s ease-out 1.0s both}
+
+    /* ── STEP ENTER ── */
+    @keyframes stepEnter{
+      from{opacity:0;transform:translateX(30px) scale(.99)}
+      to  {opacity:1;transform:translateX(0)    scale(1)  }
+    }
+    .step-enter{animation:stepEnter .42s cubic-bezier(.4,0,.2,1) forwards}
+
+    /* ── CARD STAGGER ── */
+    .cs-0{animation:fadeUp .5s ease-out .04s both}
+    .cs-1{animation:fadeUp .5s ease-out .11s both}
+    .cs-2{animation:fadeUp .5s ease-out .18s both}
+    .cs-3{animation:fadeUp .5s ease-out .25s both}
+    .cs-4{animation:fadeUp .5s ease-out .32s both}
+
+    /* ── RING PULSE ── */
+    @keyframes ringPulse{
+      0%  {transform:scale(1);  opacity:.5}
+      100%{transform:scale(2.2);opacity:0 }
+    }
+    /* ── TICKER ── */
+    @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+    /* ── PROGRESS GLOW ── */
+    @keyframes progressGlow{
+      0%,100%{background-position:200% 0;box-shadow:0 0 8px rgba(196,144,32,.4)}
+      50%    {background-position:0%   0;box-shadow:0 0 18px rgba(196,144,32,.6)}
+    }
+
+    /* ─────────────────────────────────────
+       LIGHT-THEME COMPONENTS
+    ───────────────────────────────────── */
+
+    /* Section backgrounds */
+    .bg-light  {background:#FDFAF5}
+    .bg-cream  {background:#F3EDE0}
+    .bg-cream2 {background:#EDE6D5}
+
+    /* Card – light */
+    .card-light{
+      background:#FFFFFF;
+      border:1px solid rgba(30,20,10,.07);
+      border-radius:18px;
+      box-shadow:0 3px 18px rgba(30,20,10,.07);
+      transition:all .3s ease;
+      position:relative;
+      overflow:hidden;
+    }
+    .card-light:hover{
+      transform:translateY(-4px);
+      box-shadow:0 14px 44px rgba(30,20,10,.11),0 0 0 1px rgba(196,144,32,.15);
+      border-color:rgba(196,144,32,.25);
+    }
+
+    /* City card */
+    .city-card{
+      background:#FFFFFF;
+      border:1px solid rgba(30,20,10,.07);
+      border-radius:12px;
+      padding:14px 16px;
+      box-shadow:0 2px 10px rgba(30,20,10,.05);
+      transition:all .25s ease;
+    }
+    .city-card:hover{
+      background:#FDF8F0;
+      border-color:rgba(196,144,32,.3);
+      transform:translateY(-2px);
+      box-shadow:0 6px 20px rgba(30,20,10,.09);
+    }
+
+    /* Gold badge */
+    .gold-badge{
+      display:inline-block;
+      font-size:.68rem; letter-spacing:.28em; text-transform:uppercase;
+      color:#9E6E05;
+      padding:5px 18px;
+      border:1px solid rgba(158,110,5,.28);
+      border-radius:100px;
+      background:rgba(158,110,5,.07);
+      margin-bottom:1.2rem;
+    }
+
+    /* Gold button */
+    .btn-gold{
+      background:linear-gradient(135deg,#c49020 0%,#d4a843 40%,#f0cc6e 60%,#d4a843 80%,#c49020 100%);
+      background-size:200% 200%;
+      color:#07080e;
+      font-weight:600;
+      border:none; cursor:pointer;
+      transition:all .3s cubic-bezier(.4,0,.2,1);
+      position:relative; overflow:hidden;
+      letter-spacing:.04em;
+      text-decoration:none;
+      display:inline-block;
+    }
+    .btn-gold::after{
+      content:'';position:absolute;top:0;left:-100%;
+      width:60%;height:100%;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);
+      transform:skewX(-20deg);transition:left .5s ease;
+    }
+    .btn-gold:hover{background-position:100% 0;transform:translateY(-2px);box-shadow:0 12px 36px rgba(196,144,32,.38)}
+    .btn-gold:hover::after{left:140%}
+    .btn-gold:active{transform:translateY(0) scale(.98)}
+    .btn-gold:disabled{opacity:.6;cursor:not-allowed;transform:none}
+
+    /* Outline button – light bg */
+    .btn-outline-dark{
+      background:transparent;
+      color:#9E6E05;
+      font-weight:500;
+      border:1.5px solid rgba(158,110,5,.4);
+      cursor:pointer;
+      transition:all .25s ease;
+      letter-spacing:.04em;
+      text-decoration:none;
+      display:inline-block;
+    }
+    .btn-outline-dark:hover{background:rgba(158,110,5,.07);border-color:#B8890C;color:#B8890C}
+
+    /* Outline button – dark bg (funnel) */
+    .btn-outline-light{
+      background:transparent;color:rgba(212,168,67,.9);
+      font-weight:500;border:1px solid rgba(212,168,67,.35);
+      cursor:pointer;transition:all .25s ease;letter-spacing:.04em;
+    }
+    .btn-outline-light:hover{background:rgba(212,168,67,.08);border-color:rgba(212,168,67,.6);color:#d4a843}
+
+    /* ── INPUT (light) ── */
+    .premium-input-light{
+      background:#FFFFFF;
+      border:1.5px solid rgba(30,20,10,.14);
+      color:#1A1510;
+      transition:all .2s ease;outline:none;
+      font-family:'Inter',system-ui,sans-serif;
+      font-size:.9rem;
+    }
+    .premium-input-light:focus{
+      border-color:#B8890C;
+      background:#FFFDF8;
+      box-shadow:0 0 0 3px rgba(184,137,12,.12);
+    }
+    .premium-input-light::placeholder{color:rgba(30,20,10,.35)}
+    .premium-input-light.error{border-color:rgba(220,38,38,.65)}
+
+    /* ── INPUT (dark – funnel) ── */
+    .premium-input{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+      color:#fff;transition:all .2s ease;outline:none;
+      font-family:'Inter',system-ui,sans-serif;font-size:.9rem;
+    }
+    .premium-input:focus{border-color:rgba(212,168,67,.7);background:rgba(212,168,67,.05);box-shadow:0 0 0 3px rgba(212,168,67,.1)}
+    .premium-input::placeholder{color:rgba(255,255,255,.3)}
+    .premium-input.error{border-color:rgba(239,68,68,.7)}
+
+    /* ── CHECKBOX ── */
+    .premium-checkbox{
+      appearance:none;-webkit-appearance:none;
+      width:18px;height:18px;
+      border:1.5px solid rgba(184,137,12,.5);
+      border-radius:4px;background:rgba(255,255,255,.04);
+      cursor:pointer;position:relative;flex-shrink:0;transition:all .2s ease;
+    }
+    .premium-checkbox:checked{background:#d4a843;border-color:#d4a843}
+    .premium-checkbox:checked::after{
+      content:'';position:absolute;top:2px;left:5px;
+      width:6px;height:9px;
+      border:2px solid #07080e;border-top:none;border-left:none;
+      transform:rotate(45deg);
+    }
+    /* Light bg checkbox */
+    .premium-checkbox-light{
+      appearance:none;-webkit-appearance:none;
+      width:18px;height:18px;
+      border:1.5px solid rgba(158,110,5,.45);
+      border-radius:4px;background:#FFFFFF;
+      cursor:pointer;position:relative;flex-shrink:0;transition:all .2s ease;
+    }
+    .premium-checkbox-light:checked{background:#B8890C;border-color:#B8890C}
+    .premium-checkbox-light:checked::after{
+      content:'';position:absolute;top:2px;left:5px;
+      width:6px;height:9px;
+      border:2px solid #FFFFFF;border-top:none;border-left:none;
+      transform:rotate(45deg);
+    }
+
+    /* ── ANSWER CARD (funnel dark) ── */
+    .answer-card{
+      background:rgba(255,255,255,.04);backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      border:1px solid rgba(255,255,255,.08);border-radius:16px;
+      cursor:pointer;transition:all .22s cubic-bezier(.4,0,.2,1);
+      position:relative;overflow:hidden;user-select:none;
+      -webkit-tap-highlight-color:transparent;
+    }
+    .answer-card:hover{background:rgba(212,168,67,.07);border-color:rgba(212,168,67,.45);transform:translateY(-2px) scale(1.01);box-shadow:0 8px 32px rgba(212,168,67,.12)}
+    .answer-card:active{transform:scale(.98)}
+    .answer-card.selected{background:rgba(212,168,67,.1);border-color:rgba(212,168,67,.7);box-shadow:0 8px 40px rgba(212,168,67,.18),0 0 0 1px rgba(212,168,67,.3);transform:scale(1.01)}
+
+    /* ── PROGRESS BAR ── */
+    .progress-fill{
+      background:linear-gradient(90deg,#9e7c1f,#d4a843,#f0cc6e,#d4a843);
+      background-size:200% 100%;
+      animation:progressGlow 2.5s ease-in-out infinite;
+      transition:width .55s cubic-bezier(.4,0,.2,1);
+      border-radius:2px;
+    }
+
+    /* ── STICKY HEADER ── */
+    .sticky-header{
+      position:fixed;top:0;left:0;right:0;z-index:100;
+      transition:all .3s ease;
+    }
+    .sticky-header.scrolled{
+      background:rgba(253,250,245,.95);
+      backdrop-filter:blur(20px);
+      -webkit-backdrop-filter:blur(20px);
+      border-bottom:1px solid rgba(30,20,10,.09);
+      box-shadow:0 2px 20px rgba(30,20,10,.06);
+    }
+
+    /* ── SECTION DIVIDER ── */
+    .section-divider{
+      width:100%;height:1px;
+      background:linear-gradient(90deg,transparent,rgba(30,20,10,.1),transparent);
+    }
+
+    /* ── BENTO GRID MOBILE ── */
+    @media(max-width:640px){
+      .bento-grid{
+        grid-template-columns:1fr 1fr !important;
+        grid-template-rows:auto !important;
+      }
+      .bento-grid > *{
+        grid-column:auto !important;
+        grid-row:auto !important;
+      }
+    }
+
+    /* ── FEATURE CARD TOP LINE ── */
+    .card-top-line::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:2px;
+    }
+
+    /* ── TICKER ── */
+    .ticker-wrap{overflow:hidden;width:100%}
+    .ticker-inner{display:flex;width:max-content;animation:ticker 28s linear infinite}
+    .ticker-inner:hover{animation-play-state:paused}
+
+    /* ── STICKY CTA ── */
+    .sticky-cta{
+      position:fixed;bottom:28px;right:28px;z-index:99;
+      transition:all .35s cubic-bezier(.4,0,.2,1);
+    }
+    @media(max-width:640px){
+      .sticky-cta{bottom:0;right:0;left:0;border-radius:0!important;border-top:1px solid rgba(196,144,32,.25)}
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar{width:4px}
+    ::-webkit-scrollbar-track{background:#FDFAF5}
+    ::-webkit-scrollbar-thumb{background:rgba(158,110,5,.3);border-radius:2px}
+
+    /* ── GLASS CARD (dark / funnel) ── */
+    .glass-card{
+      background:rgba(255,255,255,.04);
+      backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+      border:1px solid rgba(255,255,255,.08);border-radius:16px;
+    }
+
+    /* Investment section bg */
+    .invest-bg{
+      background:
+        radial-gradient(ellipse 90% 70% at 50% 50%,rgba(12,22,65,.92) 0%,rgba(8,9,18,.97) 100%);
+    }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+const { useState, useEffect, useRef, useMemo, useCallback } = React;
+
+/* ══════════════════════════════════
+   HOOKS
+══════════════════════════════════ */
+function useInView(t=0.1){
+  const ref=useRef(); const [v,setV]=useState(false);
+  useEffect(()=>{
+    const el=ref.current; if(!el)return;
+    const o=new IntersectionObserver(([e])=>{if(e.isIntersecting){setV(true);o.disconnect();}},{threshold:t});
+    o.observe(el); return()=>o.disconnect();
+  },[]);
+  return [ref,v];
+}
+function useCounter(target,inView,dur=1800){
+  const [n,setN]=useState(0);
+  useEffect(()=>{
+    if(!inView)return;
+    let s=0; const step=target/(dur/16);
+    const t=setInterval(()=>{s+=step;if(s>=target){setN(target);clearInterval(t);}else setN(Math.floor(s));},16);
+    return()=>clearInterval(t);
+  },[inView,target]);
+  return n;
+}
+function useScrolled(thresh=80){
+  const [v,setV]=useState(false);
+  useEffect(()=>{
+    const h=()=>setV(window.scrollY>thresh);
+    window.addEventListener('scroll',h,{passive:true});
+    return()=>window.removeEventListener('scroll',h);
+  },[thresh]);
+  return v;
+}
+
+/* ══════════════════════════════════
+   DATA MODEL
+══════════════════════════════════ */
+const INIT={
+  lead_type:'',has_visited:'',private_interest:'',investment_interest:'',
+  priority:'',company_interest:'',company_goal:'',
+  first_name:'',last_name:'',company_name:'',email:'',phone:'',
+  tags:[],route_goal:'',submitted_at:null,source:'daszelt_funnel_2025',
+};
+const S={
+  Q1:'q1_type',Q2:'q2_visited',
+  PA:'pa_interest',PB:'pb_invest',PC:'pc_priority',PF:'p_form',
+  CA:'ca_interest',CB:'cb_goal',CF:'c_form',
+};
+const PROG={q1_type:1,q2_visited:2,pa_interest:3,pb_invest:4,pc_priority:5,p_form:6,ca_interest:3,cb_goal:4,c_form:5};
+
+function computeTags(d){
+  const t=[];
+  if(d.lead_type==='private'){
+    t.push('private_lead');
+    if(d.has_visited==='yes') t.push('returning_visitor');
+    if(d.has_visited==='no')  t.push('new_visitor');
+    if(d.investment_interest==='ja_infos')      t.push('private_invest_interest');
+    if(d.investment_interest==='vielleicht')    t.push('private_invest_warm');
+    if(d.investment_interest==='newsletter_only')t.push('private_newsletter');
+    if(d.private_interest==='unterstuetzen')    t.push('private_supporter');
+    if(d.priority==='investment')               t.push('high_intent_invest');
+  }
+  if(d.lead_type==='company'){
+    t.push('company_lead');
+    if(d.has_visited==='yes')                   t.push('returning_company');
+    if(d.company_interest==='marketingpakete')  t.push('company_marketing');
+    if(d.company_interest==='weihnachtsessen')  t.push('company_weihnachtsessen');
+    if(d.company_interest==='firmenanlaesse')   t.push('company_firmenevent');
+    if(d.company_interest==='sideevents')       t.push('company_sideevents');
+    if(d.company_interest==='crowdfunding')     t.push('company_crowdinvesting');
+    if(d.company_goal==='investment')           t.push('company_invest_interest');
+  }
+  return t;
+}
+async function submitLead(raw){
+  const p={...raw,tags:computeTags(raw),route_goal:raw.lead_type==='private'?'private_campaign':'company_campaign',submitted_at:new Date().toISOString()};
+  console.log('%c📋 DAS ZELT Lead','color:#d4a843;font-weight:bold',p);
+  // await fetch('YOUR_WEBHOOK_URL',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p)});
+  return p;
+}
+
+/* ══════════════════════════════════
+   SHARED UI
+══════════════════════════════════ */
+function AnimateIn({children,delay=0,style={}}){
+  const [ref,v]=useInView();
+  return(
+    <div ref={ref} style={{opacity:v?1:0,transform:v?'translateY(0)':'translateY(22px)',transition:`opacity .7s ease ${delay}ms,transform .7s ease ${delay}ms`,...style}}>
+      {children}
+    </div>
+  );
+}
+
+/* ══════════════════════════════════
+   BACKGROUND (hero only)
+══════════════════════════════════ */
+function SnowHero({count=30}){
+  const f=useMemo(()=>Array.from({length:count},(_,i)=>({
+    id:i,left:Math.random()*100,size:Math.random()*10+6,
+    dur:(Math.random()*9+8).toFixed(1),del:(Math.random()*12).toFixed(1),
+    op:(Math.random()*.45+.25).toFixed(2),
+  })),[]);
+  return(
+    <div style={{position:'absolute',inset:0,overflow:'hidden',pointerEvents:'none',zIndex:2}}>
+      {f.map(s=>(
+        <div key={s.id} style={{position:'absolute',left:`${s.left}%`,top:'-20px',fontSize:`${s.size}px`,opacity:s.op,userSelect:'none',color:'rgba(230,240,255,0.9)',animation:`snowfall ${s.dur}s linear ${s.del}s infinite`}}>❄</div>
+      ))}
+    </div>
+  );
+}
+
+function StarsHero(){
+  const s=useMemo(()=>Array.from({length:80},(_,i)=>({
+    id:i,l:Math.random()*100,t:Math.random()*100,
+    sz:Math.random()*2+.4,dur:(Math.random()*3+2).toFixed(1),
+    del:(Math.random()*4).toFixed(1),gold:Math.random()>.8,
+  })),[]);
+  return(
+    <div style={{position:'absolute',inset:0,overflow:'hidden',pointerEvents:'none',zIndex:1}}>
+      {s.map(x=>(
+        <div key={x.id} style={{
+          position:'absolute',left:`${x.l}%`,top:`${x.t}%`,
+          width:`${x.sz}px`,height:`${x.sz}px`,borderRadius:'50%',
+          background:x.gold?'rgba(240,200,100,0.9)':'rgba(255,255,255,0.85)',
+          boxShadow:x.gold?`0 0 ${x.sz*3}px rgba(240,200,100,0.5)`:'none',
+          animation:`twinkle ${x.dur}s ease-in-out ${x.del}s infinite`,
+        }}/>
+      ))}
+    </div>
+  );
+}
+
+/* ══════════════════════════════════
+   STICKY HEADER
+══════════════════════════════════ */
+function StickyHeader({onCTA}){
+  const scrolled=useScrolled(90);
+  return(
+    <header className={`sticky-header ${scrolled?'scrolled':''}`} style={{padding:'14px 28px',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+      <div className="font-serif" style={{fontSize:'1.25rem',fontWeight:700,letterSpacing:'-.01em',color:scrolled?'#1A1510':'#FFFFFF',transition:'color .3s',textShadow:scrolled?'none':'0 1px 8px rgba(0,0,0,0.4)'}}>
+        DAS ZELT
+      </div>
+      <button onClick={onCTA} className="btn-gold" style={{padding:'8px 22px',borderRadius:'100px',fontSize:'.8rem'}}>
+        Jetzt mitmachen →
+      </button>
+    </header>
+  );
+}
+
+/* ══════════════════════════════════
+   HERO SECTION — VIDEO BG
+══════════════════════════════════ */
+function HeroSection({onCTA}){
+  return(
+    <div style={{position:'relative',minHeight:'100vh',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',overflow:'hidden'}}>
+
+      {/* ── VIDEO BACKGROUND ── */}
+      <video autoPlay muted loop playsInline
+        style={{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover',objectPosition:'center center',zIndex:0}}>
+        <source src="hero-bg.mp4" type="video/mp4"/>
+      </video>
+
+      {/* ── OVERLAY GRADIENT ── */}
+      <div style={{
+        position:'absolute',inset:0,zIndex:1,
+        background:'linear-gradient(to bottom, rgba(4,8,24,.62) 0%, rgba(4,8,24,.38) 45%, rgba(4,8,24,.72) 100%)',
+      }}/>
+
+      {/* ── PARTICLES OVER VIDEO ── */}
+      <StarsHero/>
+      <SnowHero/>
+
+      {/* ── BOTTOM FADE TO SITE BG ── */}
+      <div style={{position:'absolute',bottom:0,left:0,right:0,height:'14rem',background:'linear-gradient(transparent,#FDFAF5)',pointerEvents:'none',zIndex:3}}/>
+
+      {/* ── CONTENT ── */}
+      <div style={{position:'relative',zIndex:4,textAlign:'center',padding:'6rem 1.5rem 5rem',maxWidth:'920px',margin:'0 auto'}}>
+
+        {/* Live badge */}
+        <div className="fade-up-0" style={{marginBottom:'1.5rem'}}>
+          <span style={{display:'inline-flex',alignItems:'center',gap:'8px',fontSize:'.7rem',letterSpacing:'.3em',textTransform:'uppercase',color:'rgba(240,200,110,.95)',padding:'6px 20px',border:'1px solid rgba(212,168,67,.3)',borderRadius:'100px',background:'rgba(212,168,67,.08)'}}>
+            <span style={{width:6,height:6,borderRadius:'50%',background:'#4ade80',boxShadow:'0 0 8px rgba(74,222,128,.9)',animation:'pulse 2s ease-in-out infinite',flexShrink:0}}/>
+            Exklusive Vorrunde — Limitierte Plätze
+          </span>
+        </div>
+
+        {/* Brand */}
+        <div className="fade-up-1" style={{marginBottom:'1.2rem'}}>
+          <h1 className="font-serif gold-shimmer" style={{fontSize:'clamp(4.2rem,10vw,8rem)',fontWeight:700,lineHeight:.92,letterSpacing:'-.025em'}}>
+            DAS ZELT
+          </h1>
+          <div style={{color:'rgba(255,255,255,.42)',letterSpacing:'.22em',textTransform:'uppercase',fontSize:'.72rem',fontWeight:300,marginTop:'.65rem'}}>
+            Basel &nbsp;·&nbsp; Comedy · Concert · Circus &nbsp;·&nbsp; Seit fast 25 Jahren
+          </div>
+        </div>
+
+        {/* Headline */}
+        <div className="fade-up-2" style={{marginBottom:'1.5rem'}}>
+          <h2 className="font-serif" style={{fontSize:'clamp(1.4rem,3.8vw,2.5rem)',fontWeight:400,lineHeight:1.3,fontStyle:'italic',color:'rgba(255,255,255,.92)'}}>
+            Werden Sie Teil des einzigartigen<br/>Kulturerlebnisses der Schweiz.
+          </h2>
+        </div>
+
+        {/* Description */}
+        <div className="fade-up-3" style={{marginBottom:'2.2rem',maxWidth:'580px',margin:'0 auto 2.2rem'}}>
+          <p style={{color:'rgba(255,255,255,.55)',lineHeight:1.78,fontSize:'1rem'}}>
+            DAS ZELT öffnet sein Kapital erstmals für Investoren — in einer exklusiven Vorrunde,
+            limitiert auf einen engen Kreis von Freunden, Partnern und Kunden.
+            Sichern Sie sich Ihren Platz, bevor die öffentliche Kampagne startet.
+          </p>
+        </div>
+
+        {/* Trust icons */}
+        <div className="fade-up-4" style={{display:'flex',justifyContent:'center',gap:'2.5rem',flexWrap:'wrap',marginBottom:'2.5rem'}}>
+          {[
+            {icon:'🎭',label:'Grösste mobile Bühne der Schweiz'},
+            {icon:'🎟️',label:'2 Tickets p.a. ab CHF 1\'000'},
+            {icon:'🏆',label:'Swiss Location Award 2025'},
+          ].map((i,k)=>(
+            <div key={k} style={{display:'flex',alignItems:'center',gap:'8px',color:'rgba(255,255,255,.55)',fontSize:'.82rem'}}>
+              <span>{i.icon}</span><span>{i.label}</span>
+            </div>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <div className="fade-up-5">
+          <button onClick={onCTA} className="btn-gold" style={{padding:'1.1rem 3.2rem',borderRadius:'100px',fontSize:'1rem'}}>
+            Jetzt Interesse bekunden &nbsp;→
+          </button>
+          <p style={{marginTop:'1rem',color:'rgba(255,255,255,.22)',fontSize:'.73rem',letterSpacing:'.05em'}}>
+            Kostenlos &nbsp;·&nbsp; Unverbindlich &nbsp;·&nbsp; 2 Minuten
+          </p>
+        </div>
+      </div>
+
+      {/* Scroll hint */}
+      <div style={{position:'absolute',bottom:'2.2rem',left:'50%',display:'flex',flexDirection:'column',alignItems:'center',gap:'6px',zIndex:4,animation:'scrollBounce 1.8s ease-in-out infinite'}}>
+        <span style={{color:'rgba(255,255,255,.22)',fontSize:'.63rem',letterSpacing:'.2em',textTransform:'uppercase'}}>Entdecken</span>
+        <svg width="18" height="10" viewBox="0 0 18 10" fill="none">
+          <path d="M1 1.5L9 8.5L17 1.5" stroke="rgba(212,168,67,0.45)" strokeWidth="1.8" strokeLinecap="round"/>
+        </svg>
+      </div>
+    </div>
+  );
+}
+
+/* ══════════════════════════════════
+   STATS BAR (light)
+══════════════════════════════════ */
+function StatsBar(){
+  const [ref,v]=useInView();
+  const y1=useCounter(25,v);
+  const y2=useCounter(11,v,1200);
+  const y3=useCounter(75021,v,2200);
+  const y4=useCounter(26,v,1000);
+  const stats=[
+    {num:`~${y1}`,label:'Jahre Schweizer Kultur'},
+    {num:y2,label:'Städte in der Schweiz'},
+    {num:y3.toLocaleString('de-CH'),label:'Stimmen beim Swiss Location Award'},
+    {num:y4+'.',label:'Saison «Schwiizer Hits»'},
+  ];
+  return(
+    <div ref={ref} className="bg-cream" style={{padding:'3rem 1.5rem',borderBottom:'1px solid rgba(30,20,10,.08)'}}>
+      <div style={{maxWidth:'1100px',margin:'0 auto',display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:'2rem',textAlign:'center'}}>
+        {stats.map((s,i)=>(
+          <div key={i} style={{opacity:v?1:0,transform:v?'translateY(0)':'translateY(16px)',transition:`all .6s ease ${i*140}ms`}}>
+            <div className="font-serif gold-shimmer-dark" style={{fontSize:'clamp(2.2rem,4vw,3rem)',fontWeight:700,lineHeight:1}}>
+              {s.num}
+            </div>
+            <div style={{color:'#7A6E62',fontSize:'.8rem',marginTop:'6px',letterSpacing:'.03em'}}>{s.label}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* ══════════════════════════════════
+   WHAT IS DAS ZELT (light)
+══════════════════════════════════ */
+function WhatSection(){
+  const cards=[
+    {icon:'🎭',color:'#C0283E',img:'img/tent-interior.jpg',title:'Comedy & Satire',text:'Die besten Comedians, Kabarettisten und Satiriker der Schweiz und darüber hinaus. Lachen als Hochkultur — direkt unter dem Zeltdach.',tags:['Stand-up','Kabarett','Satire','Impro']},
+    {icon:'🎵',color:'#1E50C8',img:'img/wine-bokeh.jpg',title:'Konzerte & Musik',text:'Von Volksmusik bis zu internationalen Headlinern — DAS ZELT bietet eine Akustik und Nähe, die kein Konzertsaal reproduzieren kann.',tags:['Volksmusik','Pop','Jazz','Klassik']},
+    {icon:'🎪',color:'#B8790A',img:'img/private-event.jpg',title:'Circus & Show',text:'Spektakuläre Darbietungen, die Grenzen des Möglichen überwinden. Artistik, Magie, Theater — eine Welt, die Sie nicht mehr loslässt.',tags:['Artistik','Magie','Theater','Show']},
+    {icon:'🍽️',color:'#1A8C4E',img:'img/food-catering.jpg',title:'Gastronomie & Events',text:'Kulinarische Erlebnisse, Apéro-Pakete und exklusive Dinner direkt am Vorstellungsabend — für Privatpersonen, Gruppen und Firmen.',tags:['Dinner','VIP','Apéro','Gruppen']},
+  ];
+  return(
+    <section className="bg-light" style={{padding:'6rem 1.5rem'}}>
+      <div style={{maxWidth:'1200px',margin:'0 auto'}}>
+        <AnimateIn style={{textAlign:'center',marginBottom:'3.5rem'}}>
+          <div className="gold-badge">Das Erlebnis</div>
+          <h2 className="font-serif" style={{fontSize:'clamp(1.8rem,4vw,2.8rem)',fontWeight:600,lineHeight:1.2,color:'#1A1510',letterSpacing:'-.015em'}}>
+            Schweizer Kultur.<br/>Live. Unter einem Dach.
+          </h2>
+          <p style={{color:'#6B6157',fontSize:'.95rem',lineHeight:1.75,maxWidth:'560px',margin:'1rem auto 0'}}>
+            DAS ZELT ist die grösste mobile Entertainment-Plattform der Schweiz — Comedy,
+            Konzerte und Circus vereint in einem einzigartigen Zelt-Ambiente.
+          </p>
+        </AnimateIn>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(260px,1fr))',gap:'1.25rem'}}>
+          {cards.map((c,i)=>(
+            <AnimateIn key={i} delay={i*80}>
+              <div className="card-light" style={{padding:0,height:'100%',overflow:'hidden',display:'flex',flexDirection:'column'}}>
+                {/* Photo header */}
+                <div style={{position:'relative',height:'200px',overflow:'hidden',flexShrink:0}}>
+                  <img src={c.img} alt={c.title} style={{width:'100%',height:'100%',objectFit:'cover',display:'block',transition:'transform .5s ease'}}
+                    onMouseEnter={e=>e.currentTarget.style.transform='scale(1.06)'}
+                    onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'}/>
+                  <div style={{position:'absolute',inset:0,background:`linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.45) 100%)`}}/>
+                  <div style={{position:'absolute',bottom:'12px',left:'16px',fontSize:'1.8rem',lineHeight:1,filter:'drop-shadow(0 2px 4px rgba(0,0,0,.5))'}}>{c.icon}</div>
+                  <div style={{position:'absolute',top:0,left:0,right:0,height:'3px',background:`linear-gradient(90deg,transparent,${c.color},transparent)`}}/>
+                </div>
+                {/* Content */}
+                <div style={{padding:'1.5rem',flex:1,display:'flex',flexDirection:'column'}}>
+                  <h3 className="font-serif" style={{fontSize:'1.25rem',fontWeight:600,color:'#1A1510',marginBottom:'.55rem'}}>{c.title}</h3>
+                  <p style={{color:'#6B6157',fontSize:'.86rem',lineHeight:1.68,marginBottom:'1.2rem',flex:1}}>{c.text}</p>
+                  <div style={{display:'flex',flexWrap:'wrap',gap:'6px'}}>
+                    {c.tags.map(t=>(
+                      <span key={t} style={{fontSize:'.68rem',padding:'3px 10px',background:'rgba(30,20,10,.05)',border:'1px solid rgba(30,20,10,.09)',borderRadius:'100px',color:'#8A7E72',letterSpacing:'.03em'}}>{t}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </AnimateIn>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ══════════════════════════════════
+   PHOTO GALLERY / IMPRESSIONEN
+══════════════════════════════════ */
+function PhotoGallery(){
+  const photos=[
+    {src:'img/tent-interior.jpg',alt:'Grosser Festsaal mit Kronleuchtern',span:'col-span-2 row-span-2',label:'Der grosse Saal'},
+    {src:'img/alps-zelt.jpg',alt:'DAS ZELT mit Alpenblick',span:'',label:'Aussenansicht'},
+    {src:'img/private-event.jpg',alt:'Gala-Dinner',span:'',label:'Gala-Abende'},
+    {src:'img/food-catering.jpg',alt:'Catering & Gastronomie',span:'',label:'Gastronomie'},
+    {src:'img/show-stage.jpg',alt:'Tischdekoration & Ambiente',span:'',label:'Festliche Stimmung'},
+    {src:'img/wine-bokeh.jpg',alt:'Weingläser im Kerzenschein',span:'',label:'Weinkultur'},
+  ];
+  return(
+    <section className="bg-light" style={{padding:'6rem 1.5rem'}}>
+      <div style={{maxWidth:'1200px',margin:'0 auto'}}>
+        <AnimateIn style={{textAlign:'center',marginBottom:'3rem'}}>
+          <div className="gold-badge">Impressionen</div>
+          <h2 className="font-serif" style={{fontSize:'clamp(1.8rem,4vw,2.8rem)',fontWeight:600,lineHeight:1.2,color:'#1A1510'}}>
+            Ein Blick hinter<br/>den Vorhang.
+          </h2>
+          <p style={{color:'#6B6157',fontSize:'.95rem',lineHeight:1.75,maxWidth:'480px',margin:'1rem auto 0'}}>
+            Erleben Sie die Atmosphäre — vom grossen Festsaal bis zum intimen Kerzenlicht.
+          </p>
+        </AnimateIn>
+        {/* Bento grid — collapses to 2-col on mobile via CSS */}
+        <div className="bento-grid" style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gridTemplateRows:'auto',gap:'10px'}}>
+          {/* Large hero tile — span 2 cols × 2 rows */}
+          <AnimateIn delay={0} style={{gridColumn:'1/3',gridRow:'1/3'}}>
+            <div style={{position:'relative',borderRadius:'16px',overflow:'hidden',height:'100%',minHeight:'360px',cursor:'pointer'}}
+              onMouseEnter={e=>{e.currentTarget.querySelector('img').style.transform='scale(1.05)';e.currentTarget.querySelector('.overlay-label').style.opacity=1}}
+              onMouseLeave={e=>{e.currentTarget.querySelector('img').style.transform='scale(1)';e.currentTarget.querySelector('.overlay-label').style.opacity=0}}>
+              <img src="img/tent-interior.jpg" alt="Grosser Festsaal" style={{width:'100%',height:'100%',objectFit:'cover',transition:'transform .5s ease',display:'block'}}/>
+              <div style={{position:'absolute',inset:0,background:'linear-gradient(to bottom,transparent 55%,rgba(0,0,0,.6) 100%)'}}/>
+              <div className="overlay-label" style={{position:'absolute',bottom:'16px',left:'18px',opacity:0,transition:'opacity .3s ease'}}>
+                <span style={{color:'#FFF',fontWeight:600,fontSize:'.9rem',fontFamily:'Playfair Display,serif'}}>Der grosse Saal</span>
+              </div>
+            </div>
+          </AnimateIn>
+          {/* Small tiles — right column top */}
+          <AnimateIn delay={60} style={{gridColumn:'3/4',gridRow:'1/2'}}>
+            <div style={{position:'relative',borderRadius:'16px',overflow:'hidden',height:'175px',cursor:'pointer'}}
+              onMouseEnter={e=>{e.currentTarget.querySelector('img').style.transform='scale(1.07)';e.currentTarget.querySelector('.overlay-label').style.opacity=1}}
+              onMouseLeave={e=>{e.currentTarget.querySelector('img').style.transform='scale(1)';e.currentTarget.querySelector('.overlay-label').style.opacity=0}}>
+              <img src="img/alps-zelt.jpg" alt="DAS ZELT Aussenansicht" style={{width:'100%',height:'100%',objectFit:'cover',transition:'transform .5s ease'}}/>
+              <div style={{position:'absolute',inset:0,background:'linear-gradient(to bottom,transparent 45%,rgba(0,0,0,.55) 100%)'}}/>
+              <div className="overlay-label" style={{position:'absolute',bottom:'10px',left:'12px',opacity:0,transition:'opacity .3s ease'}}>
+                <span style={{color:'#FFF',fontWeight:600,fontSize:'.8rem',fontFamily:'Playfair Display,serif'}}>Aussenansicht</span>
+              </div>
+            </div>
+          </AnimateIn>
+          <AnimateIn delay={90} style={{gridColumn:'4/5',gridRow:'1/2'}}>
+            <div style={{position:'relative',borderRadius:'16px',overflow:'hidden',height:'175px',cursor:'pointer'}}
+              onMouseEnter={e=>{e.currentTarget.querySelector('img').style.transform='scale(1.07)';e.currentTarget.querySelector('.overlay-label').style.opacity=1}}
+              onMouseLeave={e=>{e.currentTarget.querySelector('img').style.transform='scale(1)';e.currentTarget.querySelector('.overlay-label').style.opacity=0}}>
+              <img src="img/private-event.jpg" alt="Gala-Dinner" style={{width:'100%',height:'100%',objectFit:'cover',transition:'transform .5s ease'}}/>
+              <div style={{position:'absolute',inset:0,background:'linear-gradient(to bottom,transparent 45%,rgba(0,0,0,.55) 100%)'}}/>
+              <div className="overlay-label" style={{position:'absolute',bottom:'10px',left:'12px',opacity:0,transition:'opacity .3s ease'}}>
+                <span style={{color:'#FFF',fontWeight:600,fontSize:'.8rem',fontFamily:'Playfair Display,serif'}}>Gala-Abende</span>
+              </div>
+            </div>
+          </AnimateIn>
+          <AnimateIn delay={120} style={{gridColumn:'3/4',gridRow:'2/3'}}>
+            <div style={{position:'relative',borderRadius:'16px',overflow:'hidden',height:'175px',cursor:'pointer'}}
+              onMouseEnter={e=>{e.currentTarget.querySelector('img').style.transform='scale(1.07)';e.currentTarget.querySelector('.overlay-label').style.opacity=1}}
+              onMouseLeave={e=>{e.currentTarget.querySelector('img').style.transform='scale(1)';e.currentTarget.querySelector('.overlay-label').style.opacity=0}}>
+              <img src="img/food-catering.jpg" alt="Catering" style={{width:'100%',height:'100%',objectFit:'cover',transition:'transform .5s ease'}}/>
+              <div style={{position:'absolute',inset:0,background:'linear-gradient(to bottom,transparent 45%,rgba(0,0,0,.55) 100%)'}}/>
+              <div className="overlay-label" style={{position:'absolute',bottom:'10px',left:'12px',opacity:0,transition:'opacity .3s ease'}}>
+                <span style={{color:'#FFF',fontWeight:600,fontSize:'.8rem',fontFamily:'Playfair Display,serif'}}>Gastronomie</span>
+              </div>
+            </div>
+          </AnimateIn>
+          <AnimateIn delay={150} style={{gridColumn:'4/5',gridRow:'2/3'}}>
+            <div style={{position:'relative',borderRadius:'16px',overflow:'hidden',height:'175px',cursor:'pointer'}}
+              onMouseEnter={e=>{e.currentTarget.querySelector('img').style.transform='scale(1.07)';e.currentTarget.querySelector('.overlay-label').style.opacity=1}}
+              onMouseLeave={e=>{e.currentTarget.querySelector('img').style.transform='scale(1)';e.currentTarget.querySelector('.overlay-label').style.opacity=0}}>
+              <img src="img/wine-bokeh.jpg" alt="Weinkultur" style={{width:'100%',height:'100%',objectFit:'cover',transition:'transform .5s ease'}}/>
+              <div style={{position:'absolute',inset:0,background:'linear-gradient(to bottom,transparent 45%,rgba(0,0,0,.55) 100%)'}}/>
+              <div className="overlay-label" style={{position:'absolute',bottom:'10px',left:'12px',opacity:0,transition:'opacity .3s ease'}}>
+                <span style={{color:'#FFF',fontWeight:600,fontSize:'.8rem',fontFamily:'Playfair Display,serif'}}>Weinkultur</span>
+              </div>
+            </div>
+          </AnimateIn>
+          {/* Bottom full-width banner */}
+          <AnimateIn delay={180} style={{gridColumn:'1/5',gridRow:'3/4'}}>
+            <div style={{position:'relative',borderRadius:'16px',overflow:'hidden',height:'200px',cursor:'pointer'}}
+              onMouseEnter={e=>{e.currentTarget.querySelector('img').style.transform='scale(1.04)';e.currentTarget.querySelector('.overlay-label').style.opacity=1}}
+              onMouseLeave={e=>{e.currentTarget.querySelector('img').style.transform='scale(1)';e.currentTarget.querySelector('.overlay-label').style.opacity=0}}>
+              <img src="img/show-stage.jpg" alt="Festliche Tische" style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'center 40%',transition:'transform .5s ease'}}/>
+              <div style={{position:'absolute',inset:0,background:'linear-gradient(to right,rgba(0,0,0,.55) 0%,transparent 60%)'}}/>
+              <div className="overlay-label font-serif" style={{position:'absolute',top:'50%',left:'2.5rem',transform:'translateY(-50%)',opacity:0,transition:'opacity .3s ease'}}>
+                <div style={{color:'rgba(212,168,67,.9)',fontSize:'.7rem',letterSpacing:'.22em',textTransform:'uppercase',marginBottom:'.4rem'}}>Das Ambiente</div>
+                <div style={{color:'#FFF',fontWeight:700,fontSize:'1.4rem',lineHeight:1.2}}>Festliche Stimmung.<br/>Unvergessliche Momente.</div>
+              </div>
+            </div>
+          </AnimateIn>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ══════════════════════════════════
+   PROGRAM SECTION (cream bg)
+══════════════════════════════════ */
+function ProgramSection(){
+  const shows=[
+    {season:'Saison 26',title:'Schwiizer Hits',subtitle:'Die Show, die die Schweiz liebt',desc:'Seit 26 Saisons bringt «Schwiizer Hits» die besten Songs und Talente der Schweizer Musikszene auf die grösste mobile Bühne. Ein Abend voller Emotionen und Lebensfreude.',tags:['Schweizer Musik','Live','Alle Altersgruppen'],accent:'#C0283E',img:'img/tent-interior.jpg'},
+    {season:'Comedy Night',title:'Stand-up & Kabarett',subtitle:'Die besten Stimmen der Schweiz',desc:'Wechselnde Highlights mit den bekanntesten Comedians der Schweizer Szene — immer wieder neu, immer überraschend.',tags:['Comedy','Kabarett','Impro'],accent:'#1E50C8',img:'img/private-event.jpg'},
+    {season:'Circus & Show',title:'Das grosse Spektakel',subtitle:'Artistik auf höchstem Niveau',desc:'Internationale Artists, atemberaubende Akrobatik und spektakuläre Darbietungen in der magischen Atmosphäre des Zelts.',tags:['Circus','Familie','International'],accent:'#B8790A',img:'img/show-stage.jpg'},
+  ];
+  return(
+    <section className="bg-cream" style={{padding:'6rem 1.5rem'}}>
+      <div style={{maxWidth:'1200px',margin:'0 auto'}}>
+        <AnimateIn style={{textAlign:'center',marginBottom:'3.5rem'}}>
+          <div className="gold-badge">Programm</div>
+          <h2 className="font-serif" style={{fontSize:'clamp(1.8rem,4vw,2.8rem)',fontWeight:600,lineHeight:1.2,color:'#1A1510'}}>
+            Unvergessliche Abende.<br/>Woche für Woche.
+          </h2>
+          <p style={{color:'#6B6157',fontSize:'.95rem',lineHeight:1.75,maxWidth:'500px',margin:'1rem auto 0'}}>
+            Von der grossen Schweizer Hitshow bis zu internationalen Circo-Spektakeln —
+            das Programm bei DAS ZELT begeistert seit Jahrzehnten.
+          </p>
+        </AnimateIn>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(320px,1fr))',gap:'1.25rem'}}>
+          {shows.map((s,i)=>(
+            <AnimateIn key={i} delay={i*90}>
+              <div style={{position:'relative',borderRadius:'18px',overflow:'hidden',minHeight:'380px',cursor:'pointer',boxShadow:'0 4px 24px rgba(0,0,0,.12)',transition:'transform .35s ease,box-shadow .35s ease'}}
+                onMouseEnter={e=>{e.currentTarget.style.transform='translateY(-5px)';e.currentTarget.style.boxShadow='0 12px 40px rgba(0,0,0,.22)';e.currentTarget.querySelector('img').style.transform='scale(1.07)'}}
+                onMouseLeave={e=>{e.currentTarget.style.transform='translateY(0)';e.currentTarget.style.boxShadow='0 4px 24px rgba(0,0,0,.12)';e.currentTarget.querySelector('img').style.transform='scale(1)'}}>
+                {/* Background image */}
+                <img src={s.img} alt={s.title} style={{position:'absolute',inset:0,width:'100%',height:'100%',objectFit:'cover',transition:'transform .5s ease'}}/>
+                {/* Dark gradient overlay */}
+                <div style={{position:'absolute',inset:0,background:'linear-gradient(to bottom,rgba(0,0,0,.1) 0%,rgba(0,0,0,.35) 40%,rgba(0,0,0,.82) 100%)'}}/>
+                {/* Accent top bar */}
+                <div style={{position:'absolute',top:0,left:0,right:0,height:'4px',background:s.accent}}/>
+                {/* Content at bottom */}
+                <div style={{position:'absolute',bottom:0,left:0,right:0,padding:'1.8rem 1.75rem'}}>
+                  <div style={{fontSize:'.68rem',letterSpacing:'.22em',textTransform:'uppercase',color:'rgba(255,255,255,.75)',marginBottom:'.6rem',fontWeight:500}}>{s.season}</div>
+                  <h3 className="font-serif" style={{fontSize:'1.55rem',fontWeight:700,color:'#FFFFFF',marginBottom:'.25rem',lineHeight:1.2}}>{s.title}</h3>
+                  <div style={{color:'rgba(255,255,255,.6)',fontSize:'.8rem',marginBottom:'.85rem',fontStyle:'italic'}}>{s.subtitle}</div>
+                  <p style={{color:'rgba(255,255,255,.72)',fontSize:'.82rem',lineHeight:1.6,marginBottom:'1rem'}}>{s.desc}</p>
+                  <div style={{display:'flex',flexWrap:'wrap',gap:'6px'}}>
+                    {s.tags.map(t=>(
+                      <span key={t} style={{fontSize:'.66rem',padding:'3px 10px',background:'rgba(255,255,255,.12)',border:'1px solid rgba(255,255,255,.2)',borderRadius:'100px',color:'rgba(255,255,255,.8)',backdropFilter:'blur(4px)'}}>{t}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </AnimateIn>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ══════════════════════════════════
+   TOUR CITIES (light)
+══════════════════════════════════ */
+function TourSection(){
+  const cities=[
+    {n:'Zürich',f:'🏙️',r:'Zürich'},{n:'Basel',f:'🎪',r:'Basel-Stadt'},{n:'Bern',f:'🐻',r:'Bern'},
+    {n:'Luzern',f:'⛰️',r:'Luzern'},{n:'St. Gallen',f:'🏔️',r:'Ostschweiz'},{n:'Uster',f:'🌊',r:'Zürich'},
+    {n:'Zofingen',f:'🌿',r:'Aargau'},{n:'Wohlen',f:'🌾',r:'Aargau'},{n:'Aarau',f:'🏛️',r:'Aargau'},
+    {n:'Solothurn',f:'⚜️',r:'Solothurn'},{n:'Altstätten SG',f:'🏡',r:'Ostschweiz'},
+  ];
+  return(
+    <section className="bg-light" style={{padding:'6rem 1.5rem'}}>
+      <div style={{maxWidth:'1200px',margin:'0 auto'}}>
+        <AnimateIn style={{textAlign:'center',marginBottom:'3.5rem'}}>
+          <div className="gold-badge">Tournee</div>
+          <h2 className="font-serif" style={{fontSize:'clamp(1.8rem,4vw,2.8rem)',fontWeight:600,lineHeight:1.2,color:'#1A1510'}}>
+            11 Städte.<br/>Eine Bühne.
+          </h2>
+          <p style={{color:'#6B6157',fontSize:'.95rem',lineHeight:1.75,maxWidth:'460px',margin:'1rem auto 0'}}>
+            Von Basel bis St. Gallen, von Zürich bis Solothurn — DAS ZELT bringt Kultur direkt in Ihre Stadt.
+          </p>
+        </AnimateIn>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(155px,1fr))',gap:'10px'}}>
+          {cities.map((c,i)=>(
+            <AnimateIn key={i} delay={i*45}>
+              <div className="city-card">
+                <div style={{fontSize:'1.4rem',marginBottom:'6px'}}>{c.f}</div>
+                <div style={{fontWeight:500,fontSize:'.9rem',color:'#1A1510'}}>{c.n}</div>
+                <div style={{fontSize:'.72rem',color:'#9A8E82',marginTop:'2px'}}>{c.r}</div>
+              </div>
+            </AnimateIn>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ══════════════════════════════════
+   INVESTMENT SECTION (dark – dramatic)
+══════════════════════════════════ */
+function InvestmentSection({onCTA}){
+  const benefits=[
+    {icon:'🎟️',title:'2 Jahrestickets',text:'Pro CHF 1\'000 Beteiligung erhalten Sie jährlich 2 Tickets für Vorstellungen Ihrer Wahl.'},
+    {icon:'💰',title:'Dividenden',text:'Bei Gewinnausschüttung profitieren Sie als Mitinhaber anteilig — emotionaler Mehrwert mit finanziellem Potenzial.'},
+    {icon:'🎬',title:'Backstage & Exklusives',text:'Backstage-Touren, Meet & Greets mit Künstlern und VIP-Erlebnisse, die nur Mitinhaber erleben.'},
+    {icon:'🤝',title:'Mitinhaber werden',text:'Werden Sie Teil einer echten Schweizer Erfolgsgeschichte — als Mitinhaberin oder Mitinhaber von DAS ZELT.'},
+  ];
+  return(
+    <section className="invest-bg" style={{padding:'7rem 1.5rem',position:'relative',overflow:'hidden'}}>
+      {/* Alps background image with dark overlay */}
+      <div style={{position:'absolute',inset:0,zIndex:0,overflow:'hidden'}}>
+        <img src="img/alps-zelt.jpg" alt="DAS ZELT mit Alpen" style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'center 60%',opacity:.18,filter:'saturate(1.2)'}}/>
+      </div>
+      {/* subtle glow */}
+      <div style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',width:'700px',height:'450px',background:'radial-gradient(ellipse,rgba(212,168,67,.06) 0%,transparent 70%)',pointerEvents:'none',zIndex:0}}/>
+      {/* star particles */}
+      {useMemo(()=>Array.from({length:60},(_,i)=>({id:i,l:Math.random()*100,t:Math.random()*100,sz:Math.random()*1.8+.4,dur:(Math.random()*3+2).toFixed(1),del:(Math.random()*4).toFixed(1)})),[]).map(x=>(
+        <div key={x.id} style={{position:'absolute',left:`${x.l}%`,top:`${x.t}%`,width:`${x.sz}px`,height:`${x.sz}px`,borderRadius:'50%',background:'rgba(255,255,255,.6)',animation:`twinkle ${x.dur}s ease-in-out ${x.del}s infinite`,pointerEvents:'none'}}/>
+      ))}
+
+      <div style={{maxWidth:'1100px',margin:'0 auto',position:'relative',zIndex:1}}>
+        <AnimateIn style={{textAlign:'center',marginBottom:'4rem'}}>
+          <span style={{display:'inline-block',fontSize:'.68rem',letterSpacing:'.28em',textTransform:'uppercase',color:'rgba(212,168,67,.85)',padding:'5px 18px',border:'1px solid rgba(212,168,67,.25)',borderRadius:'100px',background:'rgba(212,168,67,.06)',marginBottom:'1.2rem'}}>
+            Exklusive Vorrunde
+          </span>
+          <h2 className="font-serif" style={{fontSize:'clamp(2rem,5vw,3.5rem)',fontWeight:700,lineHeight:1.15,letterSpacing:'-.02em',marginBottom:'1.2rem'}}>
+            <span style={{color:'rgba(255,255,255,.9)'}}>Was, wenn</span>{' '}
+            <span className="gold-shimmer">DAS ZELT</span><br/>
+            <span style={{color:'rgba(255,255,255,.9)'}}>dir gehören würde?</span>
+          </h2>
+          <p style={{color:'rgba(255,255,255,.55)',fontSize:'1.05rem',lineHeight:1.78,maxWidth:'640px',margin:'0 auto 2rem'}}>
+            Zum ersten Mal in der Geschichte von DAS ZELT haben Sie die Möglichkeit, Mitinhaber
+            der grössten mobilen Entertainment-Plattform der Schweiz zu werden — in einer exklusiven
+            Vorrunde, bevor die öffentliche Crowdfunding-Kampagne auf{' '}
+            <span style={{color:'rgba(212,168,67,.8)'}}>conda.ch</span> startet.
+          </p>
+          <div style={{display:'inline-flex',alignItems:'center',gap:'10px',background:'rgba(212,168,67,.08)',border:'1px solid rgba(212,168,67,.25)',borderRadius:'100px',padding:'8px 20px',fontSize:'.8rem',color:'rgba(255,255,255,.65)'}}>
+            <span style={{width:7,height:7,borderRadius:'50%',background:'#4ade80',boxShadow:'0 0 8px rgba(74,222,128,.85)',animation:'pulse 2s ease-in-out infinite',flexShrink:0}}/>
+            Vorrunde läuft — limitierte Plätze verfügbar
+          </div>
+        </AnimateIn>
+
+        {/* Key offer */}
+        <AnimateIn delay={100}>
+          <div style={{background:'linear-gradient(135deg,rgba(212,168,67,.12) 0%,rgba(212,168,67,.04) 100%)',border:'1px solid rgba(212,168,67,.3)',borderRadius:'20px',padding:'2rem 2.5rem',textAlign:'center',marginBottom:'3rem',position:'relative',overflow:'hidden'}}>
+            <div style={{position:'absolute',top:'-30px',right:'-30px',width:'160px',height:'160px',borderRadius:'50%',background:'radial-gradient(circle,rgba(212,168,67,.12) 0%,transparent 70%)'}}/>
+            <div style={{fontSize:'.75rem',letterSpacing:'.25em',textTransform:'uppercase',color:'rgba(212,168,67,.75)',marginBottom:'.6rem'}}>Das Kernangebot</div>
+            <div className="font-serif" style={{fontSize:'clamp(1.3rem,3vw,2rem)',color:'rgba(255,255,255,.95)',lineHeight:1.3}}>
+              Bereits ab{' '}
+              <span className="gold-shimmer" style={{fontWeight:700,fontSize:'1.2em'}}>CHF 1'000</span> Beteiligung
+            </div>
+            <div style={{color:'rgba(255,255,255,.55)',marginTop:'.5rem',fontSize:'.9rem'}}>
+              erhalten Sie unter anderem jährlich{' '}
+              <strong style={{color:'rgba(255,255,255,.88)'}}>2 Tickets</strong> für Vorstellungen bei DAS ZELT
+            </div>
+          </div>
+        </AnimateIn>
+
+        {/* Benefits grid */}
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(240px,1fr))',gap:'1rem',marginBottom:'3rem'}}>
+          {benefits.map((b,i)=>(
+            <AnimateIn key={i} delay={i*75}>
+              <div style={{background:'rgba(255,255,255,.04)',border:'1px solid rgba(255,255,255,.07)',borderRadius:'16px',padding:'1.5rem',transition:'all .3s ease'}}
+                onMouseEnter={e=>{e.currentTarget.style.background='rgba(212,168,67,0.06)';e.currentTarget.style.borderColor='rgba(212,168,67,0.22)';e.currentTarget.style.transform='translateY(-3px)'}}
+                onMouseLeave={e=>{e.currentTarget.style.background='rgba(255,255,255,0.04)';e.currentTarget.style.borderColor='rgba(255,255,255,0.07)';e.currentTarget.style.transform='translateY(0)'}}>
+                <div style={{fontSize:'1.8rem',marginBottom:'.8rem'}}>{b.icon}</div>
+                <div style={{fontWeight:600,fontSize:'.95rem',color:'rgba(255,255,255,.9)',marginBottom:'.4rem'}}>{b.title}</div>
+                <div style={{color:'rgba(255,255,255,.45)',fontSize:'.82rem',lineHeight:1.62}}>{b.text}</div>
+              </div>
+            </AnimateIn>
+          ))}
+        </div>
+
+        <AnimateIn style={{textAlign:'center'}}>
+          <button onClick={onCTA} className="btn-gold" style={{padding:'1.1rem 3rem',borderRadius:'100px',fontSize:'1rem',marginBottom:'1rem'}}>
+            Jetzt Platz in der Vorrunde sichern &nbsp;→
+          </button>
+          <p style={{color:'rgba(255,255,255,.22)',fontSize:'.75rem'}}>
+            Kostenlos · Unverbindlich · Vorrunde schliesst vor der öffentlichen Kampagne
+          </p>
+        </AnimateIn>
+      </div>
+    </section>
+  );
+}
+
+/* ══════════════════════════════════
+   AWARDS (cream)
+══════════════════════════════════ */
+function AwardSection(){
+  const awards=[
+    {icon:'🏆',year:'2025',title:'Swiss Location Award',text:'DAS ZELT wurde von 75\'021 Teilnehmenden und einer unabhängigen Jury als eine der besten Event-Locations der Schweiz ausgezeichnet.',gold:true},
+    {icon:'⭐',year:'2025',title:'Prix Walo',text:'Auszeichnung für herausragende Leistungen im Schweizer Unterhaltungsbereich — eine der renommiertesten Ehrungen der Branche.',gold:false},
+    {icon:'🎪',year:'Season 26',title:'«Schwiizer Hits»',text:'26 Saisons ununterbrochener Erfolg — das langlebigste Unterhaltungsformat auf der grössten mobilen Bühne der Schweiz.',gold:false},
+  ];
+  return(
+    <section className="bg-cream" style={{padding:'6rem 1.5rem'}}>
+      <div style={{maxWidth:'1100px',margin:'0 auto'}}>
+        <AnimateIn style={{textAlign:'center',marginBottom:'3.5rem'}}>
+          <div className="gold-badge">Auszeichnungen</div>
+          <h2 className="font-serif" style={{fontSize:'clamp(1.8rem,4vw,2.8rem)',fontWeight:600,lineHeight:1.2,color:'#1A1510'}}>
+            Anerkannt.<br/>Ausgezeichnet. Geliebt.
+          </h2>
+          <p style={{color:'#6B6157',fontSize:'.95rem',lineHeight:1.75,maxWidth:'480px',margin:'1rem auto 0'}}>
+            DAS ZELT ist nicht nur eine Bühne — es ist eine Institution,
+            die die Schweiz seit fast 25 Jahren bewegt.
+          </p>
+        </AnimateIn>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(280px,1fr))',gap:'1.25rem'}}>
+          {awards.map((a,i)=>(
+            <AnimateIn key={i} delay={i*90}>
+              <div className="card-light" style={{
+                padding:'2rem',textAlign:'center',
+                background:a.gold?'linear-gradient(135deg,#FFF9EE 0%,#FFFFFF 100%)':'#FFFFFF',
+                borderColor:a.gold?'rgba(196,144,32,.25)':'rgba(30,20,10,.07)',
+              }}>
+                <div style={{fontSize:'2.5rem',marginBottom:'.8rem'}}>{a.icon}</div>
+                <div style={{fontSize:'.7rem',letterSpacing:'.2em',textTransform:'uppercase',color:'#B8890C',marginBottom:'.5rem'}}>{a.year}</div>
+                <h3 className="font-serif" style={{fontSize:'1.2rem',fontWeight:600,color:'#1A1510',marginBottom:'.8rem'}}>{a.title}</h3>
+                <p style={{color:'#6B6157',fontSize:'.84rem',lineHeight:1.68}}>{a.text}</p>
+              </div>
+            </AnimateIn>
+          ))}
+        </div>
+
+        {/* Media ticker */}
+        <AnimateIn delay={200} style={{marginTop:'3.5rem'}}>
+          <div style={{textAlign:'center',marginBottom:'1rem'}}>
+            <span style={{color:'#9A8E82',fontSize:'.72rem',letterSpacing:'.2em',textTransform:'uppercase'}}>Bekannt aus</span>
+          </div>
+          <div className="ticker-wrap">
+            <div className="ticker-inner" style={{gap:'3.5rem'}}>
+              {['SRF','20 Minuten','Basler Zeitung','NZZ','Blick','Tagesanzeiger','Radio SRF','Telebasel',
+                'SRF','20 Minuten','Basler Zeitung','NZZ','Blick','Tagesanzeiger','Radio SRF','Telebasel'].map((m,i)=>(
+                <span key={i} style={{color:'#BDB5A8',fontSize:'.85rem',fontWeight:500,letterSpacing:'.04em',whiteSpace:'nowrap'}}>{m}</span>
+              ))}
+            </div>
+          </div>
+        </AnimateIn>
+      </div>
+    </section>
+  );
+}
+
+/* ══════════════════════════════════
+   COMPANY SECTION (light)
+══════════════════════════════════ */
+function CompanySection({onCTA}){
+  const offers=[
+    {icon:'📢',title:'Marketingpakete',text:'Positionieren Sie Ihre Marke in einem exklusiven Umfeld. Von Bandenwerbung bis zu integrierten Kampagnen — DAS ZELT bietet einzigartige Sichtbarkeit.',cta:'Pakete anfragen',img:null},
+    {icon:'🍽️',title:'Weihnachtsessen',text:'Feiern Sie das Jahresende unvergesslich — direkt unter dem grossen Zelt. Mit Gastronomie, Show und einer Atmosphäre, die Ihr Team begeistert.',cta:'Verfügbarkeit prüfen',img:'img/tent-interior.jpg'},
+    {icon:'🎪',title:'Firmenanlässe',text:'DAS ZELT als exklusive Event-Location für Ihre nächste Firmenveranstaltung. Kapazitäten, Catering und Programm — alles aus einer Hand.',cta:'Jetzt anfragen',img:'img/private-event.jpg'},
+    {icon:'✨',title:'Side Events',text:'Nutzen Sie das Umfeld von DAS ZELT für exklusive Kunden-Events, Produktlaunches oder Networking-Anlässe der besonderen Art.',cta:'Möglichkeiten erkunden',img:'img/show-stage.jpg'},
+    {icon:'💼',title:'Crowdinvesting',text:'Als Unternehmen in Schweizer Kultur investieren — sichtbar, sinnvoll und mit echtem Mehrwert. Werden Sie Unternehmenspartner von DAS ZELT.',cta:'Investmentgespräch',img:null},
+  ];
+  return(
+    <section className="bg-light" style={{padding:'6rem 1.5rem'}}>
+      <div style={{maxWidth:'1200px',margin:'0 auto'}}>
+        <AnimateIn style={{textAlign:'center',marginBottom:'3.5rem'}}>
+          <div className="gold-badge">Für Unternehmen</div>
+          <h2 className="font-serif" style={{fontSize:'clamp(1.8rem,4vw,2.8rem)',fontWeight:600,lineHeight:1.2,color:'#1A1510'}}>
+            DAS ZELT für<br/>Ihre Firma.
+          </h2>
+          <p style={{color:'#6B6157',fontSize:'.95rem',lineHeight:1.75,maxWidth:'520px',margin:'1rem auto 0'}}>
+            Ob Marketing, Events oder Investment — DAS ZELT bietet Unternehmen eine einzigartige
+            Plattform für Sichtbarkeit, Mitarbeiterbindung und Kulturengagement.
+          </p>
+        </AnimateIn>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(300px,1fr))',gap:'1.25rem'}}>
+          {offers.map((o,i)=>(
+            <AnimateIn key={i} delay={i*65}>
+              <div className="card-light" style={{padding:0,height:'100%',display:'flex',flexDirection:'column',overflow:'hidden'}}>
+                {o.img && (
+                  <div style={{position:'relative',height:'160px',overflow:'hidden',flexShrink:0}}>
+                    <img src={o.img} alt={o.title} style={{width:'100%',height:'100%',objectFit:'cover',transition:'transform .5s ease'}}
+                      onMouseEnter={e=>e.currentTarget.style.transform='scale(1.06)'}
+                      onMouseLeave={e=>e.currentTarget.style.transform='scale(1)'}/>
+                    <div style={{position:'absolute',inset:0,background:'linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.4) 100%)'}}/>
+                  </div>
+                )}
+                <div style={{padding:'1.6rem',flex:1,display:'flex',flexDirection:'column'}}>
+                  <div style={{fontSize:'1.9rem',marginBottom:'.85rem'}}>{o.icon}</div>
+                  <h3 className="font-serif" style={{fontSize:'1.2rem',fontWeight:600,color:'#1A1510',marginBottom:'.55rem'}}>{o.title}</h3>
+                  <p style={{color:'#6B6157',fontSize:'.85rem',lineHeight:1.68,flex:1,marginBottom:'1.2rem'}}>{o.text}</p>
+                  <button onClick={onCTA} className="btn-outline-dark" style={{padding:'8px 18px',borderRadius:'100px',fontSize:'.78rem',alignSelf:'flex-start'}}>
+                    {o.cta} →
+                  </button>
+                </div>
+              </div>
+            </AnimateIn>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ══════════════════════════════════
+   TEAM (cream)
+══════════════════════════════════ */
+function TeamSection(){
+  const team=[
+    {name:'Adrian Steiner',role:'Direktor',i:'A'},
+    {name:'Aziza Davronova',role:'Chief Operating Officer',i:'A'},
+    {name:'Nico Steiner',role:'Head of Booking & Events',i:'N'},
+    {name:'Raphael Meier',role:'Head of Production',i:'R'},
+  ];
+  return(
+    <section className="bg-cream" style={{padding:'5rem 1.5rem'}}>
+      <div style={{maxWidth:'900px',margin:'0 auto'}}>
+        <AnimateIn style={{textAlign:'center',marginBottom:'3rem'}}>
+          <div className="gold-badge">Das Team</div>
+          <h2 className="font-serif" style={{fontSize:'clamp(1.8rem,4vw,2.8rem)',fontWeight:600,lineHeight:1.2,color:'#1A1510'}}>Menschen hinter der Bühne.</h2>
+        </AnimateIn>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',gap:'1rem'}}>
+          {team.map((p,i)=>(
+            <AnimateIn key={i} delay={i*75}>
+              <div style={{textAlign:'center',padding:'1.5rem 1rem'}}>
+                <div style={{width:'60px',height:'60px',borderRadius:'50%',margin:'0 auto 1rem',background:'linear-gradient(135deg,rgba(184,137,12,.15),rgba(184,137,12,.06))',border:'1.5px solid rgba(184,137,12,.3)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'1.4rem',fontWeight:600,color:'#B8890C',fontFamily:'Playfair Display,serif'}}>
+                  {p.i}
+                </div>
+                <div style={{fontWeight:500,fontSize:'.92rem',color:'#1A1510',marginBottom:'3px'}}>{p.name}</div>
+                <div style={{fontSize:'.75rem',color:'#9A8E82'}}>{p.role}</div>
+              </div>
+            </AnimateIn>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ══════════════════════════════════
+   FINAL CTA (light with gold glow)
+══════════════════════════════════ */
+function FinalCTASection({onPrivate,onCompany}){
+  return(
+    <section className="bg-light" style={{padding:'7rem 1.5rem',position:'relative',overflow:'hidden'}}>
+      <div style={{position:'absolute',bottom:0,left:'50%',transform:'translateX(-50%)',width:'600px',height:'300px',background:'radial-gradient(ellipse,rgba(184,137,12,.08) 0%,transparent 70%)',pointerEvents:'none'}}/>
+      <div style={{maxWidth:'780px',margin:'0 auto',textAlign:'center',position:'relative',zIndex:1}}>
+        <AnimateIn>
+          <div className="gold-badge">Jetzt mitmachen</div>
+          <h2 className="font-serif" style={{fontSize:'clamp(2rem,5vw,3.5rem)',fontWeight:700,lineHeight:1.15,letterSpacing:'-.02em',color:'#1A1510',marginBottom:'1.2rem'}}>
+            Sichern Sie sich<br/>
+            <span className="gold-shimmer-dark">Ihren Platz.</span>
+          </h2>
+          <p style={{color:'#6B6157',fontSize:'1rem',lineHeight:1.78,maxWidth:'520px',margin:'0 auto 3rem'}}>
+            Ob als Privatperson oder Unternehmen — DAS ZELT hat für Sie das passende Angebot.
+            Füllen Sie unverbindlich das Formular aus und wir melden uns persönlich.
+          </p>
+        </AnimateIn>
+        <AnimateIn delay={150}>
+          <div style={{display:'flex',gap:'1rem',justifyContent:'center',flexWrap:'wrap'}}>
+            <button onClick={onPrivate} className="btn-gold" style={{padding:'1rem 2.5rem',borderRadius:'100px',fontSize:'1rem'}}>
+              Als Privatperson &nbsp;→
+            </button>
+            <button onClick={onCompany} className="btn-outline-dark" style={{padding:'1rem 2.5rem',borderRadius:'100px',fontSize:'1rem'}}>
+              Als Firma &nbsp;→
+            </button>
+          </div>
+          <p style={{color:'#B0A89E',fontSize:'.75rem',marginTop:'1.2rem'}}>
+            Kostenlos · Unverbindlich · Kein Spam
+          </p>
+        </AnimateIn>
+      </div>
+    </section>
+  );
+}
+
+/* ══════════════════════════════════
+   FOOTER (dark)
+══════════════════════════════════ */
+function Footer(){
+  const L=({children})=>(
+    <div style={{color:'rgba(255,255,255,.42)',fontSize:'.85rem',padding:'3px 0',cursor:'pointer',transition:'color .2s'}}
+      onMouseEnter={e=>e.currentTarget.style.color='rgba(212,168,67,0.8)'}
+      onMouseLeave={e=>e.currentTarget.style.color='rgba(255,255,255,0.42)'}
+    >{children}</div>
+  );
+  return(
+    <footer style={{borderTop:'1px solid rgba(255,255,255,.06)',padding:'3.5rem 1.5rem 2rem',background:'#0E0D0A'}}>
+      <div style={{maxWidth:'1100px',margin:'0 auto'}}>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:'2.5rem',marginBottom:'2.5rem'}}>
+          <div>
+            <div className="font-serif gold-shimmer" style={{fontSize:'1.4rem',fontWeight:700,marginBottom:'.8rem'}}>DAS ZELT</div>
+            <p style={{color:'rgba(255,255,255,.32)',fontSize:'.82rem',lineHeight:1.7}}>Die grösste mobile Entertainment-Plattform der Schweiz.<br/>Comedy · Concert · Circus & mehr.</p>
+            <div style={{marginTop:'1rem',color:'rgba(255,255,255,.28)',fontSize:'.78rem',lineHeight:1.85}}>
+              Aeschenvorstadt 71<br/>4051 Basel<br/>0848 000 300
+            </div>
+          </div>
+          <div>
+            <div style={{fontSize:'.68rem',letterSpacing:'.2em',textTransform:'uppercase',color:'rgba(255,255,255,.25)',marginBottom:'1rem'}}>Programm</div>
+            {['Schwiizer Hits','Comedy Night','Circus & Show','Gastronomie'].map(l=><L key={l}>{l}</L>)}
+          </div>
+          <div>
+            <div style={{fontSize:'.68rem',letterSpacing:'.2em',textTransform:'uppercase',color:'rgba(255,255,255,.25)',marginBottom:'1rem'}}>Für Firmen</div>
+            {['Marketingpakete','Weihnachtsessen','Firmenanlässe','Side Events','Crowdinvesting'].map(l=><L key={l}>{l}</L>)}
+          </div>
+          <div>
+            <div style={{fontSize:'.68rem',letterSpacing:'.2em',textTransform:'uppercase',color:'rgba(255,255,255,.25)',marginBottom:'1rem'}}>Social Media</div>
+            {[{n:'Instagram',h:'@daszelt'},{n:'Facebook',h:'DAS ZELT'},{n:'LinkedIn',h:'das-zelt-ag'},{n:'TikTok',h:'@daszelt'}].map(s=>(
+              <div key={s.n} style={{color:'rgba(255,255,255,.42)',fontSize:'.85rem',padding:'3px 0'}}>
+                {s.n} <span style={{color:'rgba(255,255,255,.22)'}}>· {s.h}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div style={{borderTop:'1px solid rgba(255,255,255,.07)',paddingTop:'1.5rem',display:'flex',justifyContent:'space-between',flexWrap:'wrap',gap:'1rem',color:'rgba(255,255,255,.2)',fontSize:'.72rem'}}>
+          <span>© 2025 DAS ZELT AG · CHE-109.670.348</span>
+          <div style={{display:'flex',gap:'1.5rem'}}>
+            <a href="#" style={{color:'rgba(255,255,255,.22)',textDecoration:'none'}}>Datenschutz</a>
+            <a href="#" style={{color:'rgba(255,255,255,.22)',textDecoration:'none'}}>Impressum</a>
+            <a href="https://www.daszelt.ch" target="_blank" style={{color:'rgba(212,168,67,.4)',textDecoration:'none'}}>daszelt.ch</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+/* ══════════════════════════════════
+   STICKY CTA BUTTON
+══════════════════════════════════ */
+function StickyCTA({onCTA,visible}){
+  return(
+    <div className="sticky-cta" style={{opacity:visible?1:0,transform:visible?'translateY(0) scale(1)':'translateY(16px) scale(.95)',pointerEvents:visible?'auto':'none'}}>
+      <button onClick={onCTA} className="btn-gold" style={{padding:'13px 28px',borderRadius:'100px',fontSize:'.88rem',boxShadow:'0 8px 32px rgba(184,137,12,.3),0 0 0 1px rgba(184,137,12,.2)'}}>
+        Interesse bekunden &nbsp;→
+      </button>
+    </div>
+  );
+}
+
+/* ══════════════════════════════════
+   FUNNEL COMPONENTS
+══════════════════════════════════ */
+function ProgressBar({current,total}){
+  const pct=total>0?Math.round((current/total)*100):0;
+  return(
+    <div style={{maxWidth:'520px',margin:'0 auto',padding:'0 1.5rem',marginBottom:'1.8rem'}}>
+      <div style={{display:'flex',justifyContent:'space-between',marginBottom:'7px'}}>
+        <span style={{color:'rgba(255,255,255,.32)',fontSize:'.7rem',letterSpacing:'.12em',textTransform:'uppercase'}}>Schritt {current} / {total}</span>
+        <span style={{color:'rgba(212,168,67,.55)',fontSize:'.7rem'}}>{pct}%</span>
+      </div>
+      <div style={{height:'2px',background:'rgba(255,255,255,.06)',borderRadius:'2px',overflow:'hidden'}}>
+        <div className="progress-fill" style={{height:'100%',width:`${pct}%`}}/>
+      </div>
+    </div>
+  );
+}
+
+function BackButton({onClick}){
+  return(
+    <button onClick={onClick} style={{display:'flex',alignItems:'center',gap:'6px',background:'none',border:'none',cursor:'pointer',color:'rgba(255,255,255,.32)',fontSize:'.78rem',padding:'6px 0',transition:'color .2s'}}
+      onMouseEnter={e=>e.currentTarget.style.color='rgba(212,168,67,.7)'}
+      onMouseLeave={e=>e.currentTarget.style.color='rgba(255,255,255,.32)'}>
+      <svg width="14" height="10" viewBox="0 0 14 10" fill="none"><path d="M13 5H1M1 5L5 1M1 5L5 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+      Zurück
+    </button>
+  );
+}
+
+function AnswerCard({label,sublabel,icon,selected,onClick,sc}){
+  const [p,setP]=useState(false);
+  const h=()=>{setP(true);setTimeout(()=>{setP(false);onClick();},160);};
+  return(
+    <div onClick={h} className={`answer-card ${selected?'selected':''} ${sc||''}`} style={{padding:'1.05rem 1.2rem',transform:p?'scale(0.975)':undefined}}>
+      <div style={{display:'flex',alignItems:'center',gap:'14px'}}>
+        {icon&&<div style={{fontSize:'1.4rem',flexShrink:0,lineHeight:1}}>{icon}</div>}
+        <div style={{flex:1}}>
+          <div style={{fontWeight:500,fontSize:'.94rem',lineHeight:1.35,color:selected?'#d4a843':'rgba(255,255,255,.9)',transition:'color .2s'}}>{label}</div>
+          {sublabel&&<div style={{color:'rgba(255,255,255,.38)',fontSize:'.78rem',marginTop:'3px',lineHeight:1.4}}>{sublabel}</div>}
+        </div>
+        <div style={{width:'22px',height:'22px',borderRadius:'50%',flexShrink:0,border:`2px solid ${selected?'#d4a843':'rgba(255,255,255,.15)'}`,background:selected?'#d4a843':'transparent',display:'flex',alignItems:'center',justifyContent:'center',transition:'all .2s ease',boxShadow:selected?'0 0 12px rgba(212,168,67,.35)':'none'}}>
+          {selected&&<svg width="11" height="8" viewBox="0 0 11 8" fill="none"><path d="M1 3.8L4 6.8L10 1" stroke="#07080e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function QuestionStep({question,subtitle,options,onAnswer,selected}){
+  const cls=['cs-0','cs-1','cs-2','cs-3','cs-4'];
+  return(
+    <div className="step-enter" style={{maxWidth:'520px',margin:'0 auto',padding:'0 1.25rem'}}>
+      <div style={{textAlign:'center',marginBottom:'1.8rem'}}>
+        <h2 className="font-serif" style={{fontSize:'clamp(1.55rem,4vw,2.15rem)',fontWeight:600,lineHeight:1.25,color:'rgba(255,255,255,.96)',letterSpacing:'-.01em',marginBottom:'.65rem'}}>{question}</h2>
+        {subtitle&&<p style={{color:'rgba(255,255,255,.42)',fontSize:'.88rem',lineHeight:1.65}}>{subtitle}</p>}
+      </div>
+      <div style={{display:'flex',flexDirection:'column',gap:'10px'}}>
+        {options.map((o,i)=>(
+          <AnswerCard key={o.value} label={o.label} sublabel={o.sublabel} icon={o.icon}
+            selected={selected===o.value} onClick={()=>onAnswer(o.value)} sc={cls[i]}/>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function PrivateForm({onSubmit,loading}){
+  const [f,setF]=useState({first_name:'',last_name:'',email:'',phone:''});
+  const [err,setErr]=useState({});
+  const [con,setCon]=useState(false);
+  const set=(k,v)=>setF(p=>({...p,[k]:v}));
+  const val=()=>{const e={};if(!f.first_name.trim())e.first_name='Pflichtfeld';if(!f.last_name.trim())e.last_name='Pflichtfeld';if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email))e.email='Bitte gültige E-Mail';if(!con)e.consent='Bitte bestätigen';return e;};
+  const sub=e=>{e.preventDefault();const errs=val();if(Object.keys(errs).length){setErr(errs);return;}onSubmit(f);};
+  const I=(type,k,ph)=>(
+    <div>
+      <input type={type} placeholder={ph} value={f[k]} onChange={e=>set(k,e.target.value)}
+        className={`premium-input${err[k]?' error':''}`}
+        style={{width:'100%',padding:'12px 14px',borderRadius:'12px'}}/>
+      {err[k]&&<p style={{color:'rgba(239,68,68,.8)',fontSize:'.72rem',marginTop:'3px',paddingLeft:'4px'}}>{err[k]}</p>}
+    </div>
+  );
+  return(
+    <form onSubmit={sub} className="step-enter" style={{maxWidth:'520px',margin:'0 auto',padding:'0 1.25rem',display:'flex',flexDirection:'column',gap:'12px'}}>
+      <div style={{textAlign:'center',marginBottom:'.5rem'}}>
+        <h2 className="font-serif" style={{fontSize:'1.9rem',fontWeight:600,color:'rgba(255,255,255,.96)',marginBottom:'6px'}}>Ihre Kontaktdaten</h2>
+        <p style={{color:'rgba(255,255,255,.42)',fontSize:'.88rem'}}>Wir melden uns persönlich und diskret bei Ihnen.</p>
+      </div>
+      <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'10px'}}>{I('text','first_name','Vorname *')}{I('text','last_name','Nachname *')}</div>
+      {I('email','email','E-Mail-Adresse *')}
+      <input type="tel" placeholder="Telefonnummer (optional)" value={f.phone} onChange={e=>set('phone',e.target.value)} className="premium-input" style={{width:'100%',padding:'12px 14px',borderRadius:'12px'}}/>
+      <div className="glass-card" style={{padding:'14px 16px',borderColor:err.consent?'rgba(239,68,68,.45)':'rgba(255,255,255,.08)'}}>
+        <label style={{display:'flex',alignItems:'flex-start',gap:'10px',cursor:'pointer'}}>
+          <input type="checkbox" checked={con} onChange={e=>setCon(e.target.checked)} className="premium-checkbox" style={{marginTop:'1px'}}/>
+          <span style={{color:'rgba(255,255,255,.48)',fontSize:'.78rem',lineHeight:1.55}}>
+            Ich bin einverstanden, dass DAS ZELT meine Daten verwendet, um mich über das Crowdfunding-Angebot und weitere Highlights zu informieren.{' '}
+            <a href="https://www.daszelt.ch" target="_blank" style={{color:'rgba(212,168,67,.75)',textDecoration:'none'}}>Datenschutz</a>
+          </span>
+        </label>
+        {err.consent&&<p style={{color:'rgba(239,68,68,.8)',fontSize:'.72rem',marginTop:'6px'}}>{err.consent}</p>}
+      </div>
+      <button type="submit" disabled={loading} className="btn-gold" style={{width:'100%',padding:'15px',borderRadius:'14px',fontSize:'.98rem',marginTop:'4px'}}>
+        {loading?'Wird gesendet …':'Interesse bestätigen →'}
+      </button>
+      <p style={{textAlign:'center',color:'rgba(255,255,255,.2)',fontSize:'.72rem'}}>🔒 SSL-verschlüsselt · Keine Weitergabe an Dritte</p>
+    </form>
+  );
+}
+
+function CompanyForm({onSubmit,loading}){
+  const [f,setF]=useState({company_name:'',first_name:'',last_name:'',email:'',phone:''});
+  const [err,setErr]=useState({});
+  const [con,setCon]=useState(false);
+  const set=(k,v)=>setF(p=>({...p,[k]:v}));
+  const val=()=>{const e={};if(!f.company_name.trim())e.company_name='Pflichtfeld';if(!f.first_name.trim())e.first_name='Pflichtfeld';if(!f.last_name.trim())e.last_name='Pflichtfeld';if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email))e.email='Bitte gültige E-Mail';if(!con)e.consent='Bitte bestätigen';return e;};
+  const sub=e=>{e.preventDefault();const errs=val();if(Object.keys(errs).length){setErr(errs);return;}onSubmit(f);};
+  return(
+    <form onSubmit={sub} className="step-enter" style={{maxWidth:'520px',margin:'0 auto',padding:'0 1.25rem',display:'flex',flexDirection:'column',gap:'12px'}}>
+      <div style={{textAlign:'center',marginBottom:'.5rem'}}>
+        <h2 className="font-serif" style={{fontSize:'1.9rem',fontWeight:600,color:'rgba(255,255,255,.96)',marginBottom:'6px'}}>Firmenkontakt</h2>
+        <p style={{color:'rgba(255,255,255,.42)',fontSize:'.88rem'}}>Unser Team meldet sich innerhalb von 24 Stunden.</p>
+      </div>
+      <div>
+        <input type="text" placeholder="Firmenname *" value={f.company_name} onChange={e=>set('company_name',e.target.value)} className={`premium-input${err.company_name?' error':''}`} style={{width:'100%',padding:'12px 14px',borderRadius:'12px'}}/>
+        {err.company_name&&<p style={{color:'rgba(239,68,68,.8)',fontSize:'.72rem',marginTop:'3px',paddingLeft:'4px'}}>{err.company_name}</p>}
+      </div>
+      <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'10px'}}>
+        <div>
+          <input type="text" placeholder="Vorname *" value={f.first_name} onChange={e=>set('first_name',e.target.value)} className={`premium-input${err.first_name?' error':''}`} style={{width:'100%',padding:'12px 14px',borderRadius:'12px'}}/>
+          {err.first_name&&<p style={{color:'rgba(239,68,68,.8)',fontSize:'.72rem',marginTop:'3px',paddingLeft:'4px'}}>{err.first_name}</p>}
+        </div>
+        <div>
+          <input type="text" placeholder="Nachname *" value={f.last_name} onChange={e=>set('last_name',e.target.value)} className={`premium-input${err.last_name?' error':''}`} style={{width:'100%',padding:'12px 14px',borderRadius:'12px'}}/>
+          {err.last_name&&<p style={{color:'rgba(239,68,68,.8)',fontSize:'.72rem',marginTop:'3px',paddingLeft:'4px'}}>{err.last_name}</p>}
+        </div>
+      </div>
+      <div>
+        <input type="email" placeholder="Geschäftliche E-Mail *" value={f.email} onChange={e=>set('email',e.target.value)} className={`premium-input${err.email?' error':''}`} style={{width:'100%',padding:'12px 14px',borderRadius:'12px'}}/>
+        {err.email&&<p style={{color:'rgba(239,68,68,.8)',fontSize:'.72rem',marginTop:'3px',paddingLeft:'4px'}}>{err.email}</p>}
+      </div>
+      <input type="tel" placeholder="Telefonnummer (optional)" value={f.phone} onChange={e=>set('phone',e.target.value)} className="premium-input" style={{width:'100%',padding:'12px 14px',borderRadius:'12px'}}/>
+      <div className="glass-card" style={{padding:'14px 16px',borderColor:err.consent?'rgba(239,68,68,.45)':'rgba(255,255,255,.08)'}}>
+        <label style={{display:'flex',alignItems:'flex-start',gap:'10px',cursor:'pointer'}}>
+          <input type="checkbox" checked={con} onChange={e=>setCon(e.target.checked)} className="premium-checkbox" style={{marginTop:'1px'}}/>
+          <span style={{color:'rgba(255,255,255,.48)',fontSize:'.78rem',lineHeight:1.55}}>
+            Ich bin einverstanden, dass DAS ZELT meine Firmendaten nutzt, um mich über Kooperationsmöglichkeiten zu kontaktieren.{' '}
+            <a href="https://www.daszelt.ch" target="_blank" style={{color:'rgba(212,168,67,.75)',textDecoration:'none'}}>Datenschutz</a>
+          </span>
+        </label>
+        {err.consent&&<p style={{color:'rgba(239,68,68,.8)',fontSize:'.72rem',marginTop:'6px'}}>{err.consent}</p>}
+      </div>
+      <button type="submit" disabled={loading} className="btn-gold" style={{width:'100%',padding:'15px',borderRadius:'14px',fontSize:'.98rem',marginTop:'4px'}}>
+        {loading?'Wird gesendet …':'Anfrage absenden →'}
+      </button>
+      <p style={{textAlign:'center',color:'rgba(255,255,255,.2)',fontSize:'.72rem'}}>🔒 SSL-verschlüsselt · Kein Spam</p>
+    </form>
+  );
+}
+
+/* ══════════════════════════════════
+   SUCCESS SCREEN (dark)
+══════════════════════════════════ */
+const CSM={
+  marketingpakete:{icon:'📢',title:'Marketingpartnerschaft',text:'Unser Vertriebsteam meldet sich mit massgeschneiderten Paketen für maximale Markensichtbarkeit bei DAS ZELT.'},
+  weihnachtsessen:{icon:'🍽️',title:'Weihnachtsessen bei DAS ZELT',text:'Wir stellen Ihnen unser exklusives Angebot für Ihr Team oder Ihre Kunden persönlich vor.'},
+  firmenanlaesse: {icon:'🎭',title:'Exklusiver Firmenevent',text:'DAS ZELT verwandelt sich in Ihre persönliche Bühne. Wir besprechen alle Details für einen unvergesslichen Anlass.'},
+  sideevents:     {icon:'✨',title:'Side Events & Networking',text:'Entdecken Sie die Möglichkeiten unserer Side Events — perfekt für Kundenanlässe und Erlebnismarketing.'},
+  crowdfunding:   {icon:'💼',title:'Crowdinvesting bei DAS ZELT',text:'Unser Investor-Relations-Team meldet sich mit allen Details zur Unternehmens-Beteiligung.'},
+};
+
+function SuccessScreen({lead}){
+  const isP=lead.lead_type==='private';
+  const inv=lead.investment_interest;
+  const ci=!isP?(CSM[lead.company_interest]||CSM.firmenanlaesse):null;
+  const ico=inv==='ja_infos'?'🎟️':inv==='vielleicht'?'💛':'⭐';
+  const tit=inv==='ja_infos'?'Willkommen bei der Vorrunde.':inv==='vielleicht'?'Wir senden Ihnen alle Infos.':'Sie sind auf der Gästeliste.';
+  return(
+    <div className="step-enter" style={{maxWidth:'520px',margin:'0 auto',padding:'2rem 1.25rem',textAlign:'center'}}>
+      <div style={{position:'relative',display:'inline-flex',alignItems:'center',justifyContent:'center',marginBottom:'1.5rem'}}>
+        <div style={{position:'absolute',width:'80px',height:'80px',borderRadius:'50%',border:'1px solid rgba(212,168,67,.4)',animation:'ringPulse 2.5s ease-out infinite'}}/>
+        <div style={{fontSize:'3rem',lineHeight:1,filter:'drop-shadow(0 0 20px rgba(212,168,67,0.4))'}}>{isP?ico:ci?.icon}</div>
+      </div>
+      <div style={{marginBottom:'1rem'}}>
+        <span style={{display:'inline-block',padding:'5px 16px',fontSize:'.68rem',letterSpacing:'.25em',textTransform:'uppercase',background:'rgba(212,168,67,.1)',color:'rgba(212,168,67,.9)',border:'1px solid rgba(212,168,67,.25)',borderRadius:'100px'}}>Vielen Dank</span>
+      </div>
+      <h2 className="font-serif" style={{fontSize:'clamp(1.55rem,4vw,2.1rem)',fontWeight:600,lineHeight:1.2,color:'rgba(255,255,255,.96)',marginBottom:'1.5rem'}}>
+        {isP?tit:ci?.title}
+      </h2>
+      <div className="glass-card" style={{padding:'1.4rem 1.5rem',marginBottom:'1.5rem',textAlign:'left',borderColor:'rgba(212,168,67,.15)'}}>
+        {isP?(
+          <>
+            <p style={{color:'rgba(255,255,255,.78)',fontSize:'.9rem',lineHeight:1.68,marginBottom:inv!=='newsletter_only'?'1rem':0}}>
+              <strong style={{color:'#d4a843'}}>{lead.first_name}</strong>,{' '}
+              {inv==='ja_infos'&&'Sie haben sich für die exklusive Vorrunde qualifiziert. Unser Team meldet sich in Kürze persönlich mit allen Details zur Beteiligung an DAS ZELT.'}
+              {inv==='vielleicht'&&'wir senden Ihnen alle Details zur Partizipation direkt an Ihre E-Mail-Adresse. Kein Druck — informieren Sie sich in Ruhe.'}
+              {inv==='newsletter_only'&&'Sie sind jetzt auf unserer exklusiven Gästeliste. Wir informieren Sie als Erste über Highlights, neue Shows und besondere Anlässe.'}
+            </p>
+            {inv!=='newsletter_only'&&(
+              <div style={{background:'rgba(212,168,67,.07)',borderRadius:'10px',padding:'12px 14px',borderLeft:'2px solid rgba(212,168,67,.5)'}}>
+                <p style={{color:'rgba(212,168,67,.9)',fontSize:'.72rem',fontWeight:600,textTransform:'uppercase',letterSpacing:'.1em',marginBottom:'5px'}}>Ihr Vorteil als Frühinvestor·in</p>
+                <p style={{color:'rgba(255,255,255,.72)',fontSize:'.84rem',lineHeight:1.58}}>
+                  Bereits ab <strong style={{color:'#fff'}}>CHF 1'000</strong> Beteiligung erhalten Sie jährlich{' '}
+                  <strong style={{color:'#fff'}}>2 Tickets</strong> für DAS ZELT — plus Backstage-Erlebnisse, Meet & Greets und die Chance auf Dividenden.
+                </p>
+              </div>
+            )}
+          </>
+        ):(
+          <p style={{color:'rgba(255,255,255,.78)',fontSize:'.9rem',lineHeight:1.68}}>
+            <strong style={{color:'#d4a843'}}>{lead.first_name}</strong>{lead.company_name?` von ${lead.company_name}`:''}, {ci?.text}
+          </p>
+        )}
+      </div>
+      <div style={{marginBottom:'2rem'}}>
+        <p style={{color:'rgba(255,255,255,.3)',fontSize:'.68rem',textTransform:'uppercase',letterSpacing:'.18em',marginBottom:'10px'}}>Nächste Schritte</p>
+        {[{i:'📧',t:`Bestätigung an ${lead.email}`},{i:'📞',t:'Persönliches Gespräch mit unserem Team'},{i:'🎪',t:'Einladung zum nächsten exklusiven Event'}].map((s,k)=>(
+          <div key={k} style={{display:'flex',alignItems:'center',gap:'10px',color:'rgba(255,255,255,.5)',fontSize:'.85rem',marginBottom:'6px'}}>
+            <span>{s.i}</span><span>{s.t}</span>
+          </div>
+        ))}
+      </div>
+      <a href="https://www.daszelt.ch" target="_blank" rel="noopener noreferrer" className="btn-gold"
+        style={{display:'block',width:'100%',padding:'15px',borderRadius:'14px',fontSize:'.98rem',textDecoration:'none',textAlign:'center',marginBottom:'.8rem'}}>
+        DAS ZELT entdecken →
+      </a>
+      <p style={{color:'rgba(255,255,255,.18)',fontSize:'.7rem'}}>DAS ZELT — Schweizer Kultur live erleben · daszelt.ch</p>
+    </div>
+  );
+}
+
+/* ══════════════════════════════════
+   ROOT APP
+══════════════════════════════════ */
+function App(){
+  const [phase,setPhase]=useState('landing');
+  const [step,setStep]=useState(S.Q1);
+  const [lead,setLead]=useState(INIT);
+  const [loading,setLoading]=useState(false);
+  const [sk,setSk]=useState(0);
+  const [hist,setHist]=useState([]);
+  const [showSticky,setShowSticky]=useState(false);
+  const scrolled=useScrolled(500);
+  useEffect(()=>{setShowSticky(scrolled&&phase==='landing');},[scrolled,phase]);
+
+  const upd=u=>setLead(p=>({...p,...u}));
+
+  const startFunnel=useCallback((pre=null)=>{
+    if(pre) upd({lead_type:pre});
+    window.scrollTo({top:0,behavior:'smooth'});
+    setTimeout(()=>{
+      if(pre==='private'){setStep(S.Q2);setHist([S.Q1]);}
+      else if(pre==='company'){setStep(S.Q2);setHist([S.Q1]);setLead(p=>({...p,lead_type:'company'}));}
+      else{setStep(S.Q1);setHist([]);}
+      setSk(k=>k+1);setPhase('funnel');
+    },pre?380:180);
+  },[]);
+
+  const go=useCallback((next,upd_)=>{
+    if(upd_) upd(upd_);
+    setHist(h=>[...h,step]);
+    setTimeout(()=>{setStep(next);setSk(k=>k+1);},50);
+  },[step]);
+
+  const back=()=>{
+    const p=hist[hist.length-1];
+    if(!p){setPhase('landing');return;}
+    setHist(h=>h.slice(0,-1));setStep(p);setSk(k=>k+1);
+  };
+
+  const subP=async fd=>{setLoading(true);const m={...lead,...fd};const r=await submitLead(m);setLead({...m,tags:r.tags,route_goal:r.route_goal,submitted_at:r.submitted_at});setLoading(false);setPhase('success');};
+  const subC=async fd =>{setLoading(true);const m={...lead,...fd};const r=await submitLead(m);setLead({...m,tags:r.tags,route_goal:r.route_goal,submitted_at:r.submitted_at});setLoading(false);setPhase('success');};
+
+  const getProg=()=>{
+    const co=lead.lead_type==='company'||[S.CA,S.CB,S.CF].includes(step);
+    return{current:PROG[step]||1,total:co?5:6};
+  };
+
+  const renderStep=()=>{
+    switch(step){
+      case S.Q1: return <QuestionStep question="Sind Sie Privatperson oder Firma?" subtitle="Wir stellen Ihnen die relevanten Angebote vor."
+        options={[{value:'private',icon:'👤',label:'Privatperson',sublabel:'Tickets · Newsletter · Investitionsmöglichkeit'},{value:'company',icon:'🏢',label:'Firma',sublabel:'Events · Marketing · Partnerschaft · Investment'}]}
+        onAnswer={v=>go(S.Q2,{lead_type:v})} selected={lead.lead_type}/>;
+
+      case S.Q2: return <QuestionStep question="Waren Sie schon einmal bei DAS ZELT?" subtitle="Seit fast 25 Jahren bringt DAS ZELT die Schweiz zusammen."
+        options={[{value:'yes',icon:'✅',label:'Ja, ich war bereits dabei',sublabel:'Ich kenne das Erlebnis'},{value:'no',icon:'🌟',label:'Nein, noch nicht',sublabel:'Ich entdecke DAS ZELT gerade'}]}
+        onAnswer={v=>go(lead.lead_type==='private'?S.PA:S.CA,{has_visited:v})} selected={lead.has_visited}/>;
+
+      case S.PA: return <QuestionStep question="Was interessiert Sie am meisten an DAS ZELT?" subtitle="Erzählen Sie uns mehr über Ihre Motivation."
+        options={[{value:'kultur',icon:'🎭',label:'Schweizer Kultur live erleben',sublabel:'Theater, Comedy, Musik unter einem Dach'},{value:'vorteile',icon:'🥂',label:'Exklusive Vorteile sichern',sublabel:'Tickets, VIP-Zugang, besondere Erlebnisse'},{value:'unterstuetzen',icon:'💛',label:'Als Unterstützerin mitwirken',sublabel:'Teil der Erfolgsgeschichte werden'},{value:'newsletter',icon:'📬',label:'News und Highlights erhalten',sublabel:'Immer als Erste informiert sein'}]}
+        onAnswer={v=>go(S.PB,{private_interest:v})} selected={lead.private_interest}/>;
+
+      case S.PB: return <QuestionStep question="Können Sie sich vorstellen, sich mit Partizipationsscheinen an DAS ZELT zu beteiligen?" subtitle="Bereits ab CHF 1'000 erhalten Sie jährlich 2 Tickets — und werden Mitinhaber."
+        options={[{value:'ja_infos',icon:'🚀',label:'Ja, ich möchte mehr erfahren',sublabel:'Ich bin grundsätzlich interessiert'},{value:'vielleicht',icon:'🤔',label:'Vielleicht — bitte Infos senden',sublabel:'Ich möchte erst die Details kennen'},{value:'newsletter_only',icon:'📖',label:'Im Moment eher Newsletter',sublabel:'Updates und Highlights reichen mir'}]}
+        onAnswer={v=>go(S.PC,{investment_interest:v})} selected={lead.investment_interest}/>;
+
+      case S.PC: return <QuestionStep question="Was ist Ihnen besonders wichtig?" subtitle="Damit wir Ihnen das Relevanteste zeigen können."
+        options={[{value:'tickets',icon:'🎟️',label:'Tickets und exklusive Vorteile'},{value:'kultur',icon:'🇨🇭',label:'Kultur in der Schweiz unterstützen'},{value:'backstage',icon:'🎬',label:'Einblick hinter die Kulissen'},{value:'investment',icon:'💎',label:'Investment mit emotionalem Mehrwert'}]}
+        onAnswer={v=>go(S.PF,{priority:v})} selected={lead.priority}/>;
+
+      case S.PF: return <PrivateForm onSubmit={subP} loading={loading}/>;
+
+      case S.CA: return <QuestionStep question="Für was interessieren Sie sich?" subtitle="Wir zeigen Ihnen die passenden Möglichkeiten."
+        options={[{value:'marketingpakete',icon:'📢',label:'Marketingpakete',sublabel:'Sichtbarkeit und Reichweite bei DAS ZELT'},{value:'weihnachtsessen',icon:'🍽️',label:'Weihnachtsessen',sublabel:'Jahresend-Events für Teams und Kunden'},{value:'firmenanlaesse',icon:'🎪',label:'Firmenanlässe',sublabel:'Exklusive Events unter dem grossen Zelt'},{value:'sideevents',icon:'✨',label:'Side Events',sublabel:'Networking, Erlebnismarketing, Kundenanlässe'},{value:'crowdfunding',icon:'💼',label:'Crowdinvesting / Beteiligung',sublabel:'Als Unternehmen in Schweizer Kultur investieren'}]}
+        onAnswer={v=>go(S.CB,{company_interest:v})} selected={lead.company_interest}/>;
+
+      case S.CB: return <QuestionStep question="Was passt am besten zu Ihrem Anliegen?" subtitle="Damit wir die richtige Ansprechperson für Sie finden."
+        options={[{value:'mitarbeitende',icon:'🙌',label:'Mitarbeitende begeistern'},{value:'kunden',icon:'🤝',label:'Kunden einladen'},{value:'marke',icon:'💡',label:'Marke sichtbar machen'},{value:'partnerschaft',icon:'🌟',label:'Exklusive Partnerschaft prüfen'},{value:'investment',icon:'📈',label:'Investmentmöglichkeit prüfen'}]}
+        onAnswer={v=>go(S.CF,{company_goal:v})} selected={lead.company_goal}/>;
+
+      case S.CF: return <CompanyForm onSubmit={subC} loading={loading}/>;
+      default: return null;
+    }
+  };
+
+  /* SUCCESS */
+  if(phase==='success') return(
+    <div style={{minHeight:'100vh',display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',padding:'2rem 0',background:'radial-gradient(ellipse at center top,rgba(8,18,55,.4) 0%,#06070d 55%)',position:'relative',overflow:'hidden'}}>
+      {useMemo(()=>Array.from({length:70},(_,i)=>({id:i,l:Math.random()*100,t:Math.random()*100,sz:Math.random()*1.8+.4,dur:(Math.random()*3+2).toFixed(1),del:(Math.random()*4).toFixed(1)})),[]).map(x=>(
+        <div key={x.id} style={{position:'absolute',left:`${x.l}%`,top:`${x.t}%`,width:`${x.sz}px`,height:`${x.sz}px`,borderRadius:'50%',background:'rgba(255,255,255,.65)',animation:`twinkle ${x.dur}s ease-in-out ${x.del}s infinite`,pointerEvents:'none'}}/>
+      ))}
+      <div style={{position:'relative',zIndex:10,width:'100%'}}>
+        <SuccessScreen lead={lead}/>
+      </div>
+    </div>
+  );
+
+  /* FUNNEL */
+  if(phase==='funnel'){
+    const{current,total}=getProg();
+    return(
+      <div style={{minHeight:'100vh',display:'flex',flexDirection:'column',background:'radial-gradient(ellipse at 50% 0%,rgba(8,18,55,.38) 0%,#06070d 55%)',position:'relative',overflow:'hidden'}}>
+        <div style={{position:'fixed',inset:0,pointerEvents:'none',zIndex:0}}>
+          {useMemo(()=>Array.from({length:90},(_,i)=>({id:i,l:Math.random()*100,t:Math.random()*100,sz:Math.random()*1.8+.4,dur:(Math.random()*3+2).toFixed(1),del:(Math.random()*5).toFixed(1)})),[]).map(x=>(
+            <div key={x.id} style={{position:'absolute',left:`${x.l}%`,top:`${x.t}%`,width:`${x.sz}px`,height:`${x.sz}px`,borderRadius:'50%',background:'rgba(255,255,255,.55)',animation:`twinkle ${x.dur}s ease-in-out ${x.del}s infinite`}}/>
+          ))}
+        </div>
+        <div style={{position:'relative',zIndex:10,maxWidth:'560px',margin:'0 auto',width:'100%',padding:'1.4rem 1.5rem .8rem',display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+          <div className="font-serif gold-shimmer" style={{fontSize:'1.3rem',fontWeight:700}}>DAS ZELT</div>
+          <div style={{color:'rgba(255,255,255,.25)',fontSize:'.68rem',letterSpacing:'.18em',textTransform:'uppercase'}}>Exklusive Einladung</div>
+        </div>
+        <div style={{position:'relative',zIndex:10,paddingTop:'.6rem'}}><ProgressBar current={current} total={total}/></div>
+        {hist.length>0&&(
+          <div style={{position:'relative',zIndex:10,maxWidth:'560px',margin:'0 auto',width:'100%',padding:'0 1.5rem .5rem'}}>
+            <BackButton onClick={back}/>
+          </div>
+        )}
+        <div style={{position:'relative',zIndex:10,flex:1,display:'flex',alignItems:'flex-start',justifyContent:'center',paddingBottom:'5rem',paddingTop:'.5rem'}}>
+          <div key={sk} style={{width:'100%'}}>{renderStep()}</div>
+        </div>
+        <div style={{position:'fixed',bottom:0,left:0,right:0,height:'5rem',background:'linear-gradient(transparent,rgba(6,7,13,.85))',pointerEvents:'none',zIndex:5}}/>
+      </div>
+    );
+  }
+
+  /* LANDING */
+  return(
+    <div style={{background:'#FDFAF5',minHeight:'100vh'}}>
+      <StickyHeader onCTA={()=>startFunnel()}/>
+      <HeroSection onCTA={()=>startFunnel()}/>
+      <StatsBar/>
+      <div className="section-divider"/>
+      <WhatSection/>
+      <div className="section-divider"/>
+      <PhotoGallery/>
+      <div className="section-divider"/>
+      <ProgramSection/>
+      <div className="section-divider"/>
+      <TourSection/>
+      <div className="section-divider"/>
+      <InvestmentSection onCTA={()=>startFunnel('private')}/>
+      <div className="section-divider"/>
+      <AwardSection/>
+      <div className="section-divider"/>
+      <CompanySection onCTA={()=>startFunnel('company')}/>
+      <div className="section-divider"/>
+      <TeamSection/>
+      <div className="section-divider"/>
+      <FinalCTASection onPrivate={()=>startFunnel('private')} onCompany={()=>startFunnel('company')}/>
+      <Footer/>
+      <StickyCTA onCTA={()=>startFunnel()} visible={showSticky}/>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>
