@@ -8,7 +8,12 @@
       "Bash(cp \"C:/Users/jaymi/Downloads/csm_03-Hauptsseite-Slider_1ad38b61a3.jpg\" img/dinner-gala.jpg)",
       "Bash(cp \"C:/Users/jaymi/Downloads/csm_04-Hauptsseite-Slider_5a51db9179.jpg\" img/alps-exterior.jpg)",
       "Bash(mv wine-candles.jpg alps-zelt.jpg)",
-      "Bash(mv alps-exterior.jpg wine-bokeh.jpg)"
+      "Bash(mv alps-exterior.jpg wine-bokeh.jpg)",
+      "Bash(where python:*)",
+      "Bash(where python3:*)",
+      "Bash(where node:*)",
+      "Bash(where npx:*)",
+      "mcp__Claude_Preview__preview_start"
     ]
   }
 }
