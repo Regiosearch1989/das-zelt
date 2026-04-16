@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"\\\\.\\(jpg|jpeg|png|webp|avif|gif\\)$\")",
+      "Bash(mkdir -p img)",
+      "Bash(cp C:/Users/jaymi/Downloads/csm_01-Hauptsseite-Slider_c6011985a2.jpg img/tent-interior.jpg)",
+      "Bash(cp \"C:/Users/jaymi/Downloads/csm_02-Hauptsseite-Slider_973b92e98b.jpg\" img/show-stage.jpg)",
+      "Bash(cp \"C:/Users/jaymi/Downloads/csm_03-Hauptsseite-Slider_1ad38b61a3.jpg\" img/dinner-gala.jpg)",
+      "Bash(cp \"C:/Users/jaymi/Downloads/csm_04-Hauptsseite-Slider_5a51db9179.jpg\" img/alps-exterior.jpg)",
+      "Bash(mv wine-candles.jpg alps-zelt.jpg)",
+      "Bash(mv alps-exterior.jpg wine-bokeh.jpg)"
+    ]
+  }
+}
